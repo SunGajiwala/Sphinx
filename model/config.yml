@@ -1,0 +1,58 @@
+ms_data_science:
+    features:
+      num_cols: [
+            'School GPA (Recalculated)_1',
+            'School Backlogs_1', # 'backlogs_group'
+            'Total_experience_years',
+            'latest_school_duration_in_year', # has nan
+            'School_Gap_in_Years', # has nan
+            'Converted English Prof Score',
+            'GRE Quantitative',
+            'GRE Verbal',
+            'Gap_from_last_job',
+            'GRE Analytical Writing',
+            'Standardized test given',
+
+        ]
+      cat_cols: [
+            # 'School Major_Category_1', # 'School Major Category'
+            # 'Job Organization_1'   ,
+            # 'Application Term of Entry',
+        ]
+      extra_cols: [
+            'Application Area of Study',
+            'Application English requirement met',
+            'Application Transferred Out',
+            'Application Transferring In',
+      ]
+      target_col: ['Decision Name']
+      
+ms_engineering_om:
+    features:
+        num_cols: [
+            'School GPA (Recalculated)_1',
+            'School Backlogs_1', # 'backlogs_group'
+            'Total_experience_years',
+            'latest_school_duration_in_year', # has nan
+            'School_Gap_in_Years', # has nan
+            'Converted English Prof Score',
+            'GRE Quantitative',
+            'GRE Verbal',
+            'Gap_from_last_job',
+            'GRE Analytical Writing',
+            'Standardized test given',
+         ]
+                   
+        cat_cols: [
+                   # 'Job Organization_1',
+                # 'School Major_Category_1', # 'School Major Category'
+                   # 'English Prof Test Name',
+                   # 'Application Term of Entry'
+        ]
+        extra_cols: [
+            'Application Area of Study',
+            'Application English requirement met',
+            'Application Transferred Out',
+            'Application Transferring In',                    ]      
+                    
+        target_col: ['Decision Name']
