@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>explainerdashboard</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+<div><H1>Model Explainer</H1></div><ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item" role="presentation">
+    <button class="nav-link active" id="myTab0-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab0" role="tab"
+    aria-selected="true" aria-controls="myTab0">Feature Importances</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab1-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab1" role="tab"
+    aria-selected="false" aria-controls="myTab1">Classification Stats</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab2-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab2" role="tab"
+    aria-selected="false" aria-controls="myTab2">Individual Predictions</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab3-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab3" role="tab"
+    aria-selected="false" aria-controls="myTab3">What if...</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab4-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab4" role="tab"
+    aria-selected="false" aria-controls="myTab4">Feature Dependence</button>
+</li>
+
+</ul>
+
+<div class="tab-content" id="myTabContent">
+
+
+<div class="tab-pane active" id="myTab0"
+     role="tabpanel" aria-labelledby="myTab0-tab"> <div></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Feature Importances</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="e54f542d-67d0-4a78-86e6-14edb009c414" class="plotly-graph-div" style="height:440px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("e54f542d-67d0-4a78-86e6-14edb009c414")) {                    Plotly.newPlot(                        "e54f542d-67d0-4a78-86e6-14edb009c414",                        [{"hoverinfo":"text","orientation":"h","x":[0.00002260103819948937,0.002589844407754172,0.0033479873353471144,0.0036782292007155244,0.004003937565569542,0.00677944745897733,0.007167736742437671,0.01114234924613737,0.012224432570849817,0.01405240408867882,0.03675105592331079,0.116989510541209],"y":["12. Standardized test given","11. GRE Quantitative","10. GRE Analytical Writing","9. Gap_from_last_job","8. School Major Category_1","7. Total_experience_years","6. latest_school_duration_in_year","5. GRE Verbal","4. Converted English Prof Score","3. School_Gap_in_Years","2. School GPA (Recalculated)_1","1. School Backlogs_1"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average impact on predicted Decision Name<br>(mean absolute SHAP value)"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":""}},"height":440,"margin":{"b":40,"l":210,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+<div></div>
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab1"
+     role="tabpanel" aria-labelledby="myTab1-tab"> <div></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Model performance metrics</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">metric</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>accuracy</td>
+      <td>0.931</td>
+    </tr>
+    <tr>
+      <td>precision</td>
+      <td>0.936</td>
+    </tr>
+    <tr>
+      <td>recall</td>
+      <td>0.988</td>
+    </tr>
+    <tr>
+      <td>f1</td>
+      <td>0.961</td>
+    </tr>
+    <tr>
+      <td>roc_auc_score</td>
+      <td>0.893</td>
+    </tr>
+    <tr>
+      <td>pr_auc_score</td>
+      <td>0.978</td>
+    </tr>
+    <tr>
+      <td>log_loss</td>
+      <td>0.313</td>
+    </tr>
+
+  </tbody>
+</table>
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Confusion Matrix</h3><h6 class="card-subtitle">How many false positives and false negatives?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="ab11392f-3b97-4455-a0a6-ab30e96f5f4d" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("ab11392f-3b97-4455-a0a6-ab30e96f5f4d")) {                    Plotly.newPlot(                        "ab11392f-3b97-4455-a0a6-ab30e96f5f4d",                        [{"colorscale":[[0.0,"rgb(247,251,255)"],[0.125,"rgb(222,235,247)"],[0.25,"rgb(198,219,239)"],[0.375,"rgb(158,202,225)"],[0.5,"rgb(107,174,214)"],[0.625,"rgb(66,146,198)"],[0.75,"rgb(33,113,181)"],[0.875,"rgb(8,81,156)"],[1.0,"rgb(8,48,107)"]],"hoverinfo":"skip","showscale":false,"x":[" 0"," 1"],"y":[" 0"," 1"],"z":[[7.2,5.9],[1.0,85.9]],"zmax":130,"zmin":0,"type":"heatmap"}],                        {"plot_bgcolor":"#fff","title":{"text":"Confusion Matrix"},"xaxis":{"constrain":"domain","showgrid":false,"tickmode":"array","ticktext":[" 0"," 1"],"tickvals":[" 0"," 1"],"title":{"text":"predicted"}},"yaxis":{"autorange":"reversed","scaleanchor":"x","scaleratio":1,"showgrid":false,"side":"left","tickmode":"array","ticktext":[" 0"," 1"],"tickvals":[" 0"," 1"],"title":{"standoff":20,"text":"observed"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"annotations":[{"font":{"size":20},"showarrow":false,"text":"7.2%","x":" 0","y":" 0"},{"font":{"size":12},"showarrow":false,"text":" <br> <br> <br>(21)","x":" 0","y":" 0"},{"font":{"size":20},"showarrow":false,"text":"5.9%","x":" 1","y":" 0"},{"font":{"size":12},"showarrow":false,"text":" <br> <br> <br>(17)","x":" 1","y":" 0"},{"font":{"size":20},"showarrow":false,"text":"1.0%","x":" 0","y":" 1"},{"font":{"size":12},"showarrow":false,"text":" <br> <br> <br>(3)","x":" 0","y":" 1"},{"font":{"size":20},"showarrow":false,"text":"85.9%","x":" 1","y":" 1"},{"font":{"size":12},"showarrow":false,"text":" <br> <br> <br>(249)","x":" 1","y":" 1"}],"margin":{"t":40,"b":40,"l":7,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Precision Plot</h3><h6 class="card-subtitle">Does fraction positive increase with predicted probability?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="dd03fe52-a9b5-4ba1-b1d4-7098e11d0401" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("dd03fe52-a9b5-4ba1-b1d4-7098e11d0401")) {                    Plotly.newPlot(                        "dd03fe52-a9b5-4ba1-b1d4-7098e11d0401",                        [{"name":"counts","width":[0.09000000000000001,0.09000000000000001,0.09000000000000004,0.08999999999999998,0.08999999999999998,0.0900000000000001,0.08999999999999998,0.08999999999999998,0.08999999999999998,0.08999999999999998],"x":[0.05,0.15000000000000002,0.25,0.35000000000000003,0.45,0.55,0.6500000000000001,0.75,0.8500000000000001,0.95],"y":[20,0,1,1,2,5,1,2,4,254],"type":"bar"},{"name":"percentage 1","x":[0.006,null,0.232,0.321,0.452,0.568,0.634,0.725,0.848,0.995],"y":[0.0,null,0.0,1.0,1.0,0.8,1.0,1.0,0.25,0.949],"yaxis":"y2","type":"scatter"}],                        {"plot_bgcolor":"#fff","shapes":[{"type":"line","x0":0.5,"x1":0.5,"xref":"x","y0":0,"y1":1.0,"yref":"y2"}],"title":{"text":"percentage 1 vs predicted probability"},"xaxis":{"title":{"text":"predicted probability"}},"yaxis":{"title":{"text":"counts"}},"yaxis2":{"overlaying":"y","rangemode":"tozero","side":"right","tickfont":{"color":"rgb(148, 103, 189)"},"title":{"font":{"color":"rgb(148, 103, 189)"},"text":"percentage"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"legend":{"orientation":"h","xanchor":"center","y":-0.2,"x":0.5},"margin":{"t":40,"b":40,"l":40,"r":40},"annotations":[{"text":"cutoff=0.5","x":0.5,"y":0.1,"yref":"y2"}]},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Classification Plot</h3><h6 class="card-subtitle">Distribution of labels above and below cutoff</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="dd933dca-dfd4-4cb8-b51c-90d1935223ee" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("dd933dca-dfd4-4cb8-b51c-90d1935223ee")) {                    Plotly.newPlot(                        "dd933dca-dfd4-4cb8-b51c-90d1935223ee",                        [{"hoverinfo":"text","name":"0","text":["<b>21</b> (87.50%)","<b>17</b> (6.39%)","<b>38</b> (13.10%)"],"textposition":"auto","x":["below cutoff","above cutoff","total"],"y":[87.5,6.390977443609023,13.10344827586207],"type":"bar"},{"hoverinfo":"text","name":"1","text":["<b>3</b> (12.50%)","<b>249</b> (93.61%)","<b>252</b> (86.90%)"],"textposition":"auto","x":["below cutoff","above cutoff","total"],"y":[12.5,93.60902255639098,86.89655172413794],"type":"bar"}],                        {"template":{"data":{"scatter":[{"type":"scatter"}]}},"title":{"text":"Percentage above and below cutoff"},"margin":{"t":40,"b":40,"l":40,"r":40},"barmode":"stack","legend":{"orientation":"h","xanchor":"center","y":-0.2,"x":0.5}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">ROC AUC Plot</h3><h6 class="card-subtitle">Trade-off between False positives and false negatives</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="5ce37281-c980-465c-88c5-0be40f2d212c" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("5ce37281-c980-465c-88c5-0be40f2d212c")) {                    Plotly.newPlot(                        "5ce37281-c980-465c-88c5-0be40f2d212c",                        [{"hoverinfo":"text","mode":"lines","name":"ROC AUC CURVE","text":["threshold: 2.00 <br> FP: 0.00 <br> TP: 0.00","threshold: 1.00 <br> FP: 0.00 <br> TP: 0.00","threshold: 1.00 <br> FP: 0.00 <br> TP: 0.23","threshold: 1.00 <br> FP: 0.03 <br> TP: 0.23","threshold: 1.00 <br> FP: 0.03 <br> TP: 0.31","threshold: 1.00 <br> FP: 0.05 <br> TP: 0.31","threshold: 1.00 <br> FP: 0.05 <br> TP: 0.46","threshold: 1.00 <br> FP: 0.08 <br> TP: 0.46","threshold: 1.00 <br> FP: 0.08 <br> TP: 0.58","threshold: 1.00 <br> FP: 0.11 <br> TP: 0.58","threshold: 1.00 <br> FP: 0.11 <br> TP: 0.74","threshold: 1.00 <br> FP: 0.13 <br> TP: 0.74","threshold: 1.00 <br> FP: 0.13 <br> TP: 0.78","threshold: 1.00 <br> FP: 0.16 <br> TP: 0.78","threshold: 1.00 <br> FP: 0.16 <br> TP: 0.79","threshold: 0.99 <br> FP: 0.18 <br> TP: 0.79","threshold: 0.99 <br> FP: 0.18 <br> TP: 0.81","threshold: 0.99 <br> FP: 0.21 <br> TP: 0.81","threshold: 0.99 <br> FP: 0.21 <br> TP: 0.83","threshold: 0.99 <br> FP: 0.24 <br> TP: 0.83","threshold: 0.99 <br> FP: 0.24 <br> TP: 0.83","threshold: 0.99 <br> FP: 0.26 <br> TP: 0.83","threshold: 0.99 <br> FP: 0.26 <br> TP: 0.85","threshold: 0.99 <br> FP: 0.29 <br> TP: 0.85","threshold: 0.97 <br> FP: 0.29 <br> TP: 0.91","threshold: 0.97 <br> FP: 0.32 <br> TP: 0.91","threshold: 0.96 <br> FP: 0.32 <br> TP: 0.92","threshold: 0.96 <br> FP: 0.34 <br> TP: 0.92","threshold: 0.89 <br> FP: 0.34 <br> TP: 0.96","threshold: 0.81 <br> FP: 0.42 <br> TP: 0.96","threshold: 0.56 <br> FP: 0.42 <br> TP: 0.99","threshold: 0.55 <br> FP: 0.45 <br> TP: 0.99","threshold: 0.32 <br> FP: 0.45 <br> TP: 1.00","threshold: 0.00 <br> FP: 1.00 <br> TP: 1.00"],"x":[0.0,0.0,0.0,0.02631578947368421,0.02631578947368421,0.05263157894736842,0.05263157894736842,0.07894736842105263,0.07894736842105263,0.10526315789473684,0.10526315789473684,0.13157894736842105,0.13157894736842105,0.15789473684210525,0.15789473684210525,0.18421052631578946,0.18421052631578946,0.21052631578947367,0.21052631578947367,0.23684210526315788,0.23684210526315788,0.2631578947368421,0.2631578947368421,0.2894736842105263,0.2894736842105263,0.3157894736842105,0.3157894736842105,0.34210526315789475,0.34210526315789475,0.42105263157894735,0.42105263157894735,0.4473684210526316,0.4473684210526316,1.0],"y":[0.0,0.003968253968253968,0.23015873015873015,0.23015873015873015,0.30952380952380953,0.30952380952380953,0.45634920634920634,0.45634920634920634,0.5833333333333334,0.5833333333333334,0.7420634920634921,0.7420634920634921,0.7777777777777778,0.7777777777777778,0.7936507936507936,0.7936507936507936,0.8095238095238095,0.8095238095238095,0.8293650793650794,0.8293650793650794,0.8333333333333334,0.8333333333333334,0.8492063492063492,0.8492063492063492,0.9087301587301587,0.9087301587301587,0.9246031746031746,0.9246031746031746,0.9603174603174603,0.9603174603174603,0.9880952380952381,0.9880952380952381,1.0,1.0],"type":"scatter"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"ROC AUC CURVE"},"xaxis":{"constrain":"domain","range":[0,1],"title":{"text":"False Positive Rate"}},"yaxis":{"constrain":"domain","range":[0,1],"scaleanchor":"x","scaleratio":1,"title":{"text":"True Positive Rate"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"annotations":[{"align":"right","showarrow":false,"text":"roc-auc-score: 0.89","x":0.6,"xanchor":"left","y":0.4,"yanchor":"top"},{"align":"right","showarrow":false,"text":"cutoff: 0.50","x":0.6,"xanchor":"left","y":0.35,"yanchor":"top"},{"align":"right","showarrow":false,"text":"TPR: 0.99","x":0.6,"xanchor":"left","y":0.3,"yanchor":"top"},{"align":"right","showarrow":false,"text":"FPR: 0.45","x":0.6,"xanchor":"left","y":0.24,"yanchor":"top"}],"shapes":[{"line":{"color":"darkslategray","dash":"dot","width":4},"type":"line","x0":0,"x1":1,"xref":"x","y0":0,"y1":1,"yref":"y"},{"line":{"color":"lightslategray","width":1},"type":"line","x0":0,"x1":1,"xref":"x","y0":0.9880952380952381,"y1":0.9880952380952381,"yref":"y"},{"line":{"color":"lightslategray","width":1},"type":"line","x0":0.4473684210526316,"x1":0.4473684210526316,"xref":"x","y0":0,"y1":1,"yref":"y"}],"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">PR AUC Plot</h3><h6 class="card-subtitle">Trade-off between Precision and Recall</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="6979ddff-7586-4182-b1d0-87f732654a3b" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("6979ddff-7586-4182-b1d0-87f732654a3b")) {                    Plotly.newPlot(                        "6979ddff-7586-4182-b1d0-87f732654a3b",                        [{"hoverinfo":"text","mode":"lines","name":"PR AUC CURVE","text":["threshold: 0.00 <br>precision: 0.87 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.87 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.88 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.88 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.88 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.88 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.89 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.89 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.89 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.90 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.90 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.90 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.91 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.91 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.91 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.92 <br>recall: 1.00","threshold: 0.00 <br>precision: 0.92 <br>recall: 1.00","threshold: 0.02 <br>precision: 0.92 <br>recall: 1.00","threshold: 0.02 <br>precision: 0.93 <br>recall: 1.00","threshold: 0.05 <br>precision: 0.93 <br>recall: 1.00","threshold: 0.23 <br>precision: 0.93 <br>recall: 1.00","threshold: 0.32 <br>precision: 0.94 <br>recall: 1.00","threshold: 0.41 <br>precision: 0.94 <br>recall: 1.00","threshold: 0.49 <br>precision: 0.94 <br>recall: 0.99","threshold: 0.55 <br>precision: 0.94 <br>recall: 0.99","threshold: 0.56 <br>precision: 0.94 <br>recall: 0.99","threshold: 0.57 <br>precision: 0.94 <br>recall: 0.98","threshold: 0.58 <br>precision: 0.94 <br>recall: 0.98","threshold: 0.59 <br>precision: 0.94 <br>recall: 0.98","threshold: 0.63 <br>precision: 0.94 <br>recall: 0.97","threshold: 0.70 <br>precision: 0.94 <br>recall: 0.97","threshold: 0.75 <br>precision: 0.94 <br>recall: 0.96","threshold: 0.81 <br>precision: 0.94 <br>recall: 0.96","threshold: 0.81 <br>precision: 0.94 <br>recall: 0.96","threshold: 0.89 <br>precision: 0.95 <br>recall: 0.96","threshold: 0.89 <br>precision: 0.95 <br>recall: 0.96","threshold: 0.91 <br>precision: 0.95 <br>recall: 0.96","threshold: 0.93 <br>precision: 0.95 <br>recall: 0.95","threshold: 0.94 <br>precision: 0.95 <br>recall: 0.95","threshold: 0.94 <br>precision: 0.95 <br>recall: 0.94","threshold: 0.95 <br>precision: 0.95 <br>recall: 0.94","threshold: 0.95 <br>precision: 0.95 <br>recall: 0.94","threshold: 0.96 <br>precision: 0.95 <br>recall: 0.93","threshold: 0.96 <br>precision: 0.95 <br>recall: 0.93","threshold: 0.96 <br>precision: 0.95 <br>recall: 0.92","threshold: 0.96 <br>precision: 0.95 <br>recall: 0.92","threshold: 0.97 <br>precision: 0.95 <br>recall: 0.92","threshold: 0.97 <br>precision: 0.95 <br>recall: 0.92","threshold: 0.97 <br>precision: 0.95 <br>recall: 0.91","threshold: 0.97 <br>precision: 0.95 <br>recall: 0.91","threshold: 0.97 <br>precision: 0.95 <br>recall: 0.91","threshold: 0.97 <br>precision: 0.95 <br>recall: 0.90","threshold: 0.98 <br>precision: 0.95 <br>recall: 0.90","threshold: 0.98 <br>precision: 0.95 <br>recall: 0.90","threshold: 0.98 <br>precision: 0.95 <br>recall: 0.89","threshold: 0.98 <br>precision: 0.95 <br>recall: 0.89","threshold: 0.98 <br>precision: 0.95 <br>recall: 0.88","threshold: 0.98 <br>precision: 0.95 <br>recall: 0.88","threshold: 0.98 <br>precision: 0.95 <br>recall: 0.88","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.87","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.87","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.87","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.86","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.86","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.85","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.85","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.85","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.85","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.84","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.84","threshold: 0.99 <br>precision: 0.95 <br>recall: 0.83","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.83","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.83","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.83","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.83","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.82","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.82","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.81","threshold: 0.99 <br>precision: 0.96 <br>recall: 0.81","threshold: 0.99 <br>precision: 0.97 <br>recall: 0.81","threshold: 0.99 <br>precision: 0.97 <br>recall: 0.81","threshold: 0.99 <br>precision: 0.97 <br>recall: 0.80","threshold: 0.99 <br>precision: 0.97 <br>recall: 0.80","threshold: 0.99 <br>precision: 0.97 <br>recall: 0.79","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.79","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.79","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.79","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.78","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.78","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.78","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.77","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.77","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.77","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.76","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.76","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.75","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.75","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.75","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.74","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.74","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.74","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.73","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.73","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.73","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.72","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.72","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.71","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.71","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.71","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.70","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.70","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.69","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.69","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.69","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.68","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.68","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.67","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.67","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.67","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.66","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.66","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.65","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.65","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.65","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.64","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.64","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.63","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.63","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.63","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.62","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.62","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.62","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.61","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.61","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.60","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.60","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.60","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.59","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.59","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.58","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.58","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.58","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.58","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.57","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.57","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.56","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.56","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.56","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.55","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.55","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.54","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.54","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.54","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.53","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.53","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.52","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.52","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.52","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.51","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.51","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.50","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.50","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.50","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.49","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.49","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.48","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.48","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.48","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.47","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.47","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.46","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.46","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.46","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.46","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.45","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.45","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.44","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.44","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.44","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.43","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.43","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.42","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.42","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.42","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.41","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.41","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.40","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.40","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.40","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.39","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.39","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.38","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.38","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.38","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.37","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.37","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.37","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.36","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.36","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.35","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.35","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.35","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.34","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.34","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.33","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.33","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.33","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.32","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.32","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.31","threshold: 1.00 <br>precision: 0.97 <br>recall: 0.31","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.31","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.31","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.30","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.30","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.29","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.29","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.29","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.28","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.28","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.27","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.27","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.27","threshold: 1.00 <br>precision: 0.99 <br>recall: 0.26","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.26","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.25","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.25","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.25","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.24","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.24","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.23","threshold: 1.00 <br>precision: 0.98 <br>recall: 0.23","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.23","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.23","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.22","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.22","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.21","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.21","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.21","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.20","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.20","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.19","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.19","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.19","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.18","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.18","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.17","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.17","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.17","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.16","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.16","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.15","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.15","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.15","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.14","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.14","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.13","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.13","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.13","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.12","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.12","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.12","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.11","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.11","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.10","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.10","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.10","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.09","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.09","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.08","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.08","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.08","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.07","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.07","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.06","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.06","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.06","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.05","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.05","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.04","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.04","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.04","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.03","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.03","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.02","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.02","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.02","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.01","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.01","threshold: 1.00 <br>precision: 1.00 <br>recall: 0.00"],"x":[0.8689655172413793,0.8719723183391004,0.875,0.8780487804878049,0.8811188811188811,0.8842105263157894,0.8873239436619719,0.8904593639575972,0.8936170212765957,0.896797153024911,0.9,0.9032258064516129,0.9064748201438849,0.9097472924187726,0.9130434782608695,0.9163636363636364,0.9197080291970803,0.9230769230769231,0.9264705882352942,0.9298892988929889,0.9333333333333333,0.9368029739776952,0.9365671641791045,0.9363295880149812,0.9360902255639098,0.939622641509434,0.9393939393939394,0.9391634980988594,0.9389312977099237,0.9386973180076629,0.9384615384615385,0.9382239382239382,0.937984496124031,0.9416342412451362,0.9453125,0.9490196078431372,0.9488188976377953,0.9486166007905138,0.9484126984126984,0.9482071713147411,0.948,0.9477911646586346,0.9475806451612904,0.9473684210526315,0.9471544715447154,0.9510204081632653,0.9508196721311475,0.9506172839506173,0.9504132231404959,0.950207468879668,0.9541666666666667,0.9539748953974896,0.9537815126050421,0.9535864978902954,0.9533898305084746,0.9531914893617022,0.9529914529914529,0.9527896995708155,0.9525862068965517,0.9523809523809523,0.9521739130434783,0.9519650655021834,0.9517543859649122,0.9515418502202643,0.9513274336283186,0.9511111111111111,0.9553571428571429,0.9551569506726457,0.954954954954955,0.9547511312217195,0.9545454545454546,0.958904109589041,0.9587155963302753,0.9631336405529954,0.9629629629629629,0.9627906976744186,0.9626168224299065,0.9624413145539906,0.9622641509433962,0.966824644549763,0.9666666666666667,0.9665071770334929,0.9663461538461539,0.966183574879227,0.970873786407767,0.9707317073170731,0.9705882352941176,0.9704433497536946,0.9702970297029703,0.9751243781094527,0.975,0.9748743718592965,0.9747474747474747,0.9746192893401016,0.9744897959183674,0.9743589743589743,0.9742268041237113,0.9740932642487047,0.9739583333333334,0.9790575916230366,0.9789473684210527,0.9788359788359788,0.9787234042553191,0.9786096256684492,0.978494623655914,0.9783783783783784,0.9782608695652174,0.9781420765027322,0.978021978021978,0.9779005524861878,0.9777777777777777,0.9776536312849162,0.9775280898876404,0.9774011299435028,0.9772727272727273,0.9771428571428571,0.9770114942528736,0.976878612716763,0.9767441860465116,0.9766081871345029,0.9764705882352941,0.9763313609467456,0.9761904761904762,0.9760479041916168,0.9759036144578314,0.9757575757575757,0.975609756097561,0.9754601226993865,0.9753086419753086,0.9751552795031055,0.975,0.9748427672955975,0.9746835443037974,0.9745222929936306,0.9743589743589743,0.9741935483870968,0.974025974025974,0.9738562091503268,0.9736842105263158,0.9735099337748344,0.98,0.9798657718120806,0.9797297297297297,0.9795918367346939,0.9794520547945206,0.9793103448275862,0.9791666666666666,0.9790209790209791,0.9788732394366197,0.9787234042553191,0.9785714285714285,0.9784172661870504,0.9782608695652174,0.9781021897810219,0.9779411764705882,0.9777777777777777,0.9776119402985075,0.9774436090225563,0.9772727272727273,0.9770992366412213,0.9769230769230769,0.9767441860465116,0.9765625,0.9763779527559056,0.9761904761904762,0.976,0.9758064516129032,0.975609756097561,0.9754098360655737,0.9752066115702479,0.975,0.9747899159663865,0.9745762711864406,0.9829059829059829,0.9827586206896551,0.9826086956521739,0.9824561403508771,0.9823008849557522,0.9821428571428571,0.9819819819819819,0.9818181818181818,0.981651376146789,0.9814814814814815,0.9813084112149533,0.9811320754716981,0.9809523809523809,0.9807692307692307,0.9805825242718447,0.9803921568627451,0.9801980198019802,0.98,0.9797979797979798,0.9795918367346939,0.979381443298969,0.9791666666666666,0.9789473684210527,0.9787234042553191,0.978494623655914,0.9782608695652174,0.978021978021978,0.9777777777777777,0.9775280898876404,0.9772727272727273,0.9770114942528736,0.9767441860465116,0.9764705882352941,0.9761904761904762,0.9759036144578314,0.975609756097561,0.9753086419753086,0.975,0.9873417721518988,0.9871794871794872,0.987012987012987,0.9868421052631579,0.9866666666666667,0.9864864864864865,0.9863013698630136,0.9861111111111112,0.9859154929577465,0.9857142857142858,0.9855072463768116,0.9852941176470589,0.9850746268656716,0.9848484848484849,0.9846153846153847,0.984375,0.9841269841269841,0.9838709677419355,0.9836065573770492,0.9833333333333333,0.9830508474576272,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0],"y":[1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.996031746031746,0.9920634920634921,0.9880952380952381,0.9880952380952381,0.9841269841269841,0.9801587301587301,0.9761904761904762,0.9722222222222222,0.9682539682539683,0.9642857142857143,0.9603174603174603,0.9603174603174603,0.9603174603174603,0.9603174603174603,0.9563492063492064,0.9523809523809523,0.9484126984126984,0.9444444444444444,0.9404761904761905,0.9365079365079365,0.9325396825396826,0.9285714285714286,0.9246031746031746,0.9246031746031746,0.9206349206349206,0.9166666666666666,0.9126984126984127,0.9087301587301587,0.9087301587301587,0.9047619047619048,0.9007936507936508,0.8968253968253969,0.8928571428571429,0.8888888888888888,0.8849206349206349,0.8809523809523809,0.876984126984127,0.873015873015873,0.8690476190476191,0.8650793650793651,0.8611111111111112,0.8571428571428571,0.8531746031746031,0.8492063492063492,0.8492063492063492,0.8452380952380952,0.8412698412698413,0.8373015873015873,0.8333333333333334,0.8333333333333334,0.8293650793650794,0.8293650793650794,0.8253968253968254,0.8214285714285714,0.8174603174603174,0.8134920634920635,0.8095238095238095,0.8095238095238095,0.8055555555555556,0.8015873015873016,0.7976190476190477,0.7936507936507936,0.7936507936507936,0.7896825396825397,0.7857142857142857,0.7817460317460317,0.7777777777777778,0.7777777777777778,0.7738095238095238,0.7698412698412699,0.7658730158730159,0.7619047619047619,0.7579365079365079,0.753968253968254,0.75,0.746031746031746,0.7420634920634921,0.7420634920634921,0.7380952380952381,0.7341269841269841,0.7301587301587301,0.7261904761904762,0.7222222222222222,0.7182539682539683,0.7142857142857143,0.7103174603174603,0.7063492063492064,0.7023809523809523,0.6984126984126984,0.6944444444444444,0.6904761904761905,0.6865079365079365,0.6825396825396826,0.6785714285714286,0.6746031746031746,0.6706349206349206,0.6666666666666666,0.6626984126984127,0.6587301587301587,0.6547619047619048,0.6507936507936508,0.6468253968253969,0.6428571428571429,0.6388888888888888,0.6349206349206349,0.6309523809523809,0.626984126984127,0.623015873015873,0.6190476190476191,0.6150793650793651,0.6111111111111112,0.6071428571428571,0.6031746031746031,0.5992063492063492,0.5952380952380952,0.5912698412698413,0.5873015873015873,0.5833333333333334,0.5833333333333334,0.5793650793650794,0.5753968253968254,0.5714285714285714,0.5674603174603174,0.5634920634920635,0.5595238095238095,0.5555555555555556,0.5515873015873016,0.5476190476190477,0.5436507936507936,0.5396825396825397,0.5357142857142857,0.5317460317460317,0.5277777777777778,0.5238095238095238,0.5198412698412699,0.5158730158730159,0.5119047619047619,0.5079365079365079,0.503968253968254,0.5,0.49603174603174605,0.49206349206349204,0.4880952380952381,0.48412698412698413,0.4801587301587302,0.47619047619047616,0.4722222222222222,0.46825396825396826,0.4642857142857143,0.4603174603174603,0.45634920634920634,0.45634920634920634,0.4523809523809524,0.44841269841269843,0.4444444444444444,0.44047619047619047,0.4365079365079365,0.43253968253968256,0.42857142857142855,0.4246031746031746,0.42063492063492064,0.4166666666666667,0.4126984126984127,0.4087301587301587,0.40476190476190477,0.4007936507936508,0.3968253968253968,0.39285714285714285,0.3888888888888889,0.38492063492063494,0.38095238095238093,0.376984126984127,0.373015873015873,0.36904761904761907,0.36507936507936506,0.3611111111111111,0.35714285714285715,0.3531746031746032,0.3492063492063492,0.34523809523809523,0.3412698412698413,0.3373015873015873,0.3333333333333333,0.32936507936507936,0.3253968253968254,0.32142857142857145,0.31746031746031744,0.3134920634920635,0.30952380952380953,0.30952380952380953,0.3055555555555556,0.30158730158730157,0.2976190476190476,0.29365079365079366,0.2896825396825397,0.2857142857142857,0.28174603174603174,0.2777777777777778,0.27380952380952384,0.2698412698412698,0.26587301587301587,0.2619047619047619,0.25793650793650796,0.25396825396825395,0.25,0.24603174603174602,0.24206349206349206,0.23809523809523808,0.23412698412698413,0.23015873015873015,0.23015873015873015,0.2261904761904762,0.2222222222222222,0.21825396825396826,0.21428571428571427,0.21031746031746032,0.20634920634920634,0.20238095238095238,0.1984126984126984,0.19444444444444445,0.19047619047619047,0.1865079365079365,0.18253968253968253,0.17857142857142858,0.1746031746031746,0.17063492063492064,0.16666666666666666,0.1626984126984127,0.15873015873015872,0.15476190476190477,0.15079365079365079,0.14682539682539683,0.14285714285714285,0.1388888888888889,0.1349206349206349,0.13095238095238096,0.12698412698412698,0.12301587301587301,0.11904761904761904,0.11507936507936507,0.1111111111111111,0.10714285714285714,0.10317460317460317,0.0992063492063492,0.09523809523809523,0.09126984126984126,0.0873015873015873,0.08333333333333333,0.07936507936507936,0.07539682539682539,0.07142857142857142,0.06746031746031746,0.06349206349206349,0.05952380952380952,0.05555555555555555,0.051587301587301584,0.047619047619047616,0.04365079365079365,0.03968253968253968,0.03571428571428571,0.031746031746031744,0.027777777777777776,0.023809523809523808,0.01984126984126984,0.015873015873015872,0.011904761904761904,0.007936507936507936,0.003968253968253968,0.0],"type":"scatter"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"PR AUC CURVE"},"xaxis":{"constrain":"domain","range":[0,1],"title":{"text":"Precision"}},"yaxis":{"constrain":"domain","range":[0,1],"scaleanchor":"x","scaleratio":1,"title":{"text":"Recall"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"annotations":[{"align":"right","showarrow":false,"text":"pr-auc-score: 0.98","x":0.15,"xanchor":"left","y":0.4,"yanchor":"top"},{"align":"right","showarrow":false,"text":"cutoff: 0.50","x":0.15,"xanchor":"left","y":0.35,"yanchor":"top"},{"align":"right","showarrow":false,"text":"precision: 0.94","x":0.15,"xanchor":"left","y":0.3,"yanchor":"top"},{"align":"right","showarrow":false,"text":"recall: 0.99","x":0.15,"xanchor":"left","y":0.25,"yanchor":"top"}],"shapes":[{"line":{"color":"lightslategray","width":1},"type":"line","x0":0,"x1":1,"xref":"x","y0":0.9920634920634921,"y1":0.9920634920634921,"yref":"y"},{"line":{"color":"lightslategray","width":1},"type":"line","x0":0.9363295880149812,"x1":0.9363295880149812,"xref":"x","y0":0,"y1":1,"yref":"y"}],"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Lift Curve</h3><h6 class="card-subtitle">Performance how much better than random?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="25ab7d26-8de2-49a4-8554-fdd87b959ede" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("25ab7d26-8de2-49a4-8554-fdd87b959ede")) {                    Plotly.newPlot(                        "25ab7d26-8de2-49a4-8554-fdd87b959ede",                        [{"hoverinfo":"text","name":"perfect","text":["0%, 0%","86.90%, 100%","100, 100%"],"x":[0.0,86.89655303955078,100],"y":[0.0,100,100],"type":"scatter"},{"hoverinfo":"text","name":"model","text":["model selected 0.40% of all positives in first 0.34% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 1.19% of all positives in first 1.03% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 2.38% of all positives in first 2.07% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 3.57% of all positives in first 3.10% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 4.76% of all positives in first 4.14% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 5.95% of all positives in first 5.17% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 7.14% of all positives in first 6.21% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 8.33% of all positives in first 7.24% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 9.52% of all positives in first 8.28% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 10.71% of all positives in first 9.31% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 11.90% of all positives in first 10.34% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 12.70% of all positives in first 11.03% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 13.89% of all positives in first 12.07% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 15.08% of all positives in first 13.10% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 16.27% of all positives in first 14.14% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 17.46% of all positives in first 15.17% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 18.65% of all positives in first 16.21% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 19.84% of all positives in first 17.24% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 21.03% of all positives in first 18.28% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 22.22% of all positives in first 19.31% sampled<br>precision=100.00% positives in sample<br>lift=1.15","model selected 23.02% of all positives in first 20.34% sampled<br>precision=98.31% positives in sample<br>lift=1.13","model selected 23.81% of all positives in first 21.03% sampled<br>precision=98.36% positives in sample<br>lift=1.13","model selected 25.00% of all positives in first 22.07% sampled<br>precision=98.44% positives in sample<br>lift=1.13","model selected 26.19% of all positives in first 23.10% sampled<br>precision=98.51% positives in sample<br>lift=1.13","model selected 27.38% of all positives in first 24.14% sampled<br>precision=98.57% positives in sample<br>lift=1.13","model selected 28.57% of all positives in first 25.17% sampled<br>precision=98.63% positives in sample<br>lift=1.14","model selected 29.76% of all positives in first 26.21% sampled<br>precision=98.68% positives in sample<br>lift=1.14","model selected 30.95% of all positives in first 27.24% sampled<br>precision=98.73% positives in sample<br>lift=1.14","model selected 31.75% of all positives in first 28.28% sampled<br>precision=97.56% positives in sample<br>lift=1.12","model selected 32.94% of all positives in first 29.31% sampled<br>precision=97.65% positives in sample<br>lift=1.12","model selected 34.13% of all positives in first 30.34% sampled<br>precision=97.73% positives in sample<br>lift=1.12","model selected 34.92% of all positives in first 31.03% sampled<br>precision=97.78% positives in sample<br>lift=1.13","model selected 36.11% of all positives in first 32.07% sampled<br>precision=97.85% positives in sample<br>lift=1.13","model selected 37.30% of all positives in first 33.10% sampled<br>precision=97.92% positives in sample<br>lift=1.13","model selected 38.49% of all positives in first 34.14% sampled<br>precision=97.98% positives in sample<br>lift=1.13","model selected 39.68% of all positives in first 35.17% sampled<br>precision=98.04% positives in sample<br>lift=1.13","model selected 40.87% of all positives in first 36.21% sampled<br>precision=98.10% positives in sample<br>lift=1.13","model selected 42.06% of all positives in first 37.24% sampled<br>precision=98.15% positives in sample<br>lift=1.13","model selected 43.25% of all positives in first 38.28% sampled<br>precision=98.20% positives in sample<br>lift=1.13","model selected 44.44% of all positives in first 39.31% sampled<br>precision=98.25% positives in sample<br>lift=1.13","model selected 45.63% of all positives in first 40.34% sampled<br>precision=98.29% positives in sample<br>lift=1.13","model selected 46.03% of all positives in first 41.03% sampled<br>precision=97.48% positives in sample<br>lift=1.12","model selected 47.22% of all positives in first 42.07% sampled<br>precision=97.54% positives in sample<br>lift=1.12","model selected 48.41% of all positives in first 43.10% sampled<br>precision=97.60% positives in sample<br>lift=1.12","model selected 49.60% of all positives in first 44.14% sampled<br>precision=97.66% positives in sample<br>lift=1.12","model selected 50.79% of all positives in first 45.17% sampled<br>precision=97.71% positives in sample<br>lift=1.12","model selected 51.98% of all positives in first 46.21% sampled<br>precision=97.76% positives in sample<br>lift=1.13","model selected 53.17% of all positives in first 47.24% sampled<br>precision=97.81% positives in sample<br>lift=1.13","model selected 54.37% of all positives in first 48.28% sampled<br>precision=97.86% positives in sample<br>lift=1.13","model selected 55.56% of all positives in first 49.31% sampled<br>precision=97.90% positives in sample<br>lift=1.13","model selected 56.75% of all positives in first 50.34% sampled<br>precision=97.95% positives in sample<br>lift=1.13","model selected 57.54% of all positives in first 51.03% sampled<br>precision=97.97% positives in sample<br>lift=1.13","model selected 58.33% of all positives in first 52.07% sampled<br>precision=97.35% positives in sample<br>lift=1.12","model selected 59.52% of all positives in first 53.10% sampled<br>precision=97.40% positives in sample<br>lift=1.12","model selected 60.71% of all positives in first 54.14% sampled<br>precision=97.45% positives in sample<br>lift=1.12","model selected 61.90% of all positives in first 55.17% sampled<br>precision=97.50% positives in sample<br>lift=1.12","model selected 63.10% of all positives in first 56.21% sampled<br>precision=97.55% positives in sample<br>lift=1.12","model selected 64.29% of all positives in first 57.24% sampled<br>precision=97.59% positives in sample<br>lift=1.12","model selected 65.48% of all positives in first 58.28% sampled<br>precision=97.63% positives in sample<br>lift=1.12","model selected 66.67% of all positives in first 59.31% sampled<br>precision=97.67% positives in sample<br>lift=1.12","model selected 67.86% of all positives in first 60.34% sampled<br>precision=97.71% positives in sample<br>lift=1.12","model selected 68.65% of all positives in first 61.03% sampled<br>precision=97.74% positives in sample<br>lift=1.12","model selected 69.84% of all positives in first 62.07% sampled<br>precision=97.78% positives in sample<br>lift=1.13","model selected 71.03% of all positives in first 63.10% sampled<br>precision=97.81% positives in sample<br>lift=1.13","model selected 72.22% of all positives in first 64.14% sampled<br>precision=97.85% positives in sample<br>lift=1.13","model selected 73.41% of all positives in first 65.17% sampled<br>precision=97.88% positives in sample<br>lift=1.13","model selected 74.21% of all positives in first 66.21% sampled<br>precision=97.40% positives in sample<br>lift=1.12","model selected 75.40% of all positives in first 67.24% sampled<br>precision=97.44% positives in sample<br>lift=1.12","model selected 76.59% of all positives in first 68.28% sampled<br>precision=97.47% positives in sample<br>lift=1.12","model selected 77.78% of all positives in first 69.31% sampled<br>precision=97.51% positives in sample<br>lift=1.12","model selected 78.57% of all positives in first 70.34% sampled<br>precision=97.06% positives in sample<br>lift=1.12","model selected 79.37% of all positives in first 71.03% sampled<br>precision=97.09% positives in sample<br>lift=1.12","model selected 80.16% of all positives in first 72.07% sampled<br>precision=96.65% positives in sample<br>lift=1.11","model selected 80.95% of all positives in first 73.10% sampled<br>precision=96.23% positives in sample<br>lift=1.11","model selected 82.14% of all positives in first 74.14% sampled<br>precision=96.28% positives in sample<br>lift=1.11","model selected 82.94% of all positives in first 75.17% sampled<br>precision=95.87% positives in sample<br>lift=1.10","model selected 83.73% of all positives in first 76.21% sampled<br>precision=95.48% positives in sample<br>lift=1.10","model selected 84.92% of all positives in first 77.24% sampled<br>precision=95.54% positives in sample<br>lift=1.10","model selected 85.71% of all positives in first 78.28% sampled<br>precision=95.15% positives in sample<br>lift=1.10","model selected 86.90% of all positives in first 79.31% sampled<br>precision=95.22% positives in sample<br>lift=1.10","model selected 88.10% of all positives in first 80.34% sampled<br>precision=95.28% positives in sample<br>lift=1.10","model selected 88.89% of all positives in first 81.03% sampled<br>precision=95.32% positives in sample<br>lift=1.10","model selected 90.08% of all positives in first 82.07% sampled<br>precision=95.38% positives in sample<br>lift=1.10","model selected 90.87% of all positives in first 83.10% sampled<br>precision=95.02% positives in sample<br>lift=1.09","model selected 92.06% of all positives in first 84.14% sampled<br>precision=95.08% positives in sample<br>lift=1.09","model selected 92.86% of all positives in first 85.17% sampled<br>precision=94.74% positives in sample<br>lift=1.09","model selected 94.05% of all positives in first 86.21% sampled<br>precision=94.80% positives in sample<br>lift=1.09","model selected 95.24% of all positives in first 87.24% sampled<br>precision=94.86% positives in sample<br>lift=1.09","model selected 96.03% of all positives in first 88.28% sampled<br>precision=94.53% positives in sample<br>lift=1.09","model selected 96.43% of all positives in first 89.31% sampled<br>precision=93.82% positives in sample<br>lift=1.08","model selected 97.62% of all positives in first 90.34% sampled<br>precision=93.89% positives in sample<br>lift=1.08","model selected 98.41% of all positives in first 91.03% sampled<br>precision=93.94% positives in sample<br>lift=1.08","model selected 99.21% of all positives in first 92.07% sampled<br>precision=93.63% positives in sample<br>lift=1.08","model selected 100.00% of all positives in first 93.10% sampled<br>precision=93.33% positives in sample<br>lift=1.07","model selected 100.00% of all positives in first 94.14% sampled<br>precision=92.31% positives in sample<br>lift=1.06","model selected 100.00% of all positives in first 95.17% sampled<br>precision=91.30% positives in sample<br>lift=1.05","model selected 100.00% of all positives in first 96.21% sampled<br>precision=90.32% positives in sample<br>lift=1.04","model selected 100.00% of all positives in first 97.24% sampled<br>precision=89.36% positives in sample<br>lift=1.03","model selected 100.00% of all positives in first 98.28% sampled<br>precision=88.42% positives in sample<br>lift=1.02","model selected 100.00% of all positives in first 99.31% sampled<br>precision=87.50% positives in sample<br>lift=1.01"],"x":[0.3448276,1.0344827,2.0689654,3.1034484,4.137931,5.172414,6.206897,7.2413793,8.275862,9.310345,10.344828,11.034483,12.068966,13.103448,14.137931,15.172414,16.206896,17.241379,18.275862,19.310345,20.344828,21.034483,22.068966,23.103449,24.137932,25.172413,26.206896,27.241379,28.275862,29.310345,30.344828,31.034483,32.068966,33.103447,34.13793,35.172413,36.206898,37.24138,38.275864,39.310345,40.344826,41.03448,42.068966,43.103447,44.13793,45.172413,46.206898,47.24138,48.275864,49.310345,50.344826,51.03448,52.068966,53.103447,54.13793,55.172413,56.206898,57.24138,58.275864,59.310345,60.344826,61.03448,62.068966,63.103447,64.13793,65.17242,66.206894,67.24138,68.27586,69.31035,70.344826,71.034485,72.06896,73.10345,74.13793,75.17242,76.206894,77.24138,78.27586,79.31035,80.344826,81.034485,82.06896,83.10345,84.13793,85.17242,86.206894,87.24138,88.27586,89.31035,90.344826,91.034485,92.06896,93.10345,94.13793,95.17242,96.206894,97.24138,98.27586,99.31035],"y":[0.4,1.19,2.38,3.57,4.76,5.95,7.14,8.33,9.52,10.71,11.9,12.7,13.89,15.08,16.27,17.46,18.65,19.84,21.03,22.22,23.02,23.81,25.0,26.19,27.38,28.57,29.76,30.95,31.75,32.94,34.13,34.92,36.11,37.3,38.49,39.68,40.87,42.06,43.25,44.44,45.63,46.03,47.22,48.41,49.6,50.79,51.98,53.17,54.37,55.56,56.75,57.54,58.33,59.52,60.71,61.9,63.1,64.29,65.48,66.67,67.86,68.65,69.84,71.03,72.22,73.41,74.21,75.4,76.59,77.78,78.57,79.37,80.16,80.95,82.14,82.94,83.73,84.92,85.71,86.9,88.1,88.89,90.08,90.87,92.06,92.86,94.05,95.24,96.03,96.43,97.62,98.41,99.21,100.0,100.0,100.0,100.0,100.0,100.0,100.0],"type":"scatter"},{"hoverinfo":"text","name":"random","text":["random selected 0.34% of all positives in first 0.34% sampled<br>precision=86.90% positives in sample","random selected 1.03% of all positives in first 1.03% sampled<br>precision=86.90% positives in sample","random selected 2.07% of all positives in first 2.07% sampled<br>precision=86.90% positives in sample","random selected 3.10% of all positives in first 3.10% sampled<br>precision=86.90% positives in sample","random selected 4.14% of all positives in first 4.14% sampled<br>precision=86.90% positives in sample","random selected 5.17% of all positives in first 5.17% sampled<br>precision=86.90% positives in sample","random selected 6.21% of all positives in first 6.21% sampled<br>precision=86.90% positives in sample","random selected 7.24% of all positives in first 7.24% sampled<br>precision=86.90% positives in sample","random selected 8.28% of all positives in first 8.28% sampled<br>precision=86.90% positives in sample","random selected 9.31% of all positives in first 9.31% sampled<br>precision=86.90% positives in sample","random selected 10.34% of all positives in first 10.34% sampled<br>precision=86.90% positives in sample","random selected 11.03% of all positives in first 11.03% sampled<br>precision=86.90% positives in sample","random selected 12.07% of all positives in first 12.07% sampled<br>precision=86.90% positives in sample","random selected 13.10% of all positives in first 13.10% sampled<br>precision=86.90% positives in sample","random selected 14.14% of all positives in first 14.14% sampled<br>precision=86.90% positives in sample","random selected 15.17% of all positives in first 15.17% sampled<br>precision=86.90% positives in sample","random selected 16.21% of all positives in first 16.21% sampled<br>precision=86.90% positives in sample","random selected 17.24% of all positives in first 17.24% sampled<br>precision=86.90% positives in sample","random selected 18.28% of all positives in first 18.28% sampled<br>precision=86.90% positives in sample","random selected 19.31% of all positives in first 19.31% sampled<br>precision=86.90% positives in sample","random selected 20.34% of all positives in first 20.34% sampled<br>precision=86.90% positives in sample","random selected 21.03% of all positives in first 21.03% sampled<br>precision=86.90% positives in sample","random selected 22.07% of all positives in first 22.07% sampled<br>precision=86.90% positives in sample","random selected 23.10% of all positives in first 23.10% sampled<br>precision=86.90% positives in sample","random selected 24.14% of all positives in first 24.14% sampled<br>precision=86.90% positives in sample","random selected 25.17% of all positives in first 25.17% sampled<br>precision=86.90% positives in sample","random selected 26.21% of all positives in first 26.21% sampled<br>precision=86.90% positives in sample","random selected 27.24% of all positives in first 27.24% sampled<br>precision=86.90% positives in sample","random selected 28.28% of all positives in first 28.28% sampled<br>precision=86.90% positives in sample","random selected 29.31% of all positives in first 29.31% sampled<br>precision=86.90% positives in sample","random selected 30.34% of all positives in first 30.34% sampled<br>precision=86.90% positives in sample","random selected 31.03% of all positives in first 31.03% sampled<br>precision=86.90% positives in sample","random selected 32.07% of all positives in first 32.07% sampled<br>precision=86.90% positives in sample","random selected 33.10% of all positives in first 33.10% sampled<br>precision=86.90% positives in sample","random selected 34.14% of all positives in first 34.14% sampled<br>precision=86.90% positives in sample","random selected 35.17% of all positives in first 35.17% sampled<br>precision=86.90% positives in sample","random selected 36.21% of all positives in first 36.21% sampled<br>precision=86.90% positives in sample","random selected 37.24% of all positives in first 37.24% sampled<br>precision=86.90% positives in sample","random selected 38.28% of all positives in first 38.28% sampled<br>precision=86.90% positives in sample","random selected 39.31% of all positives in first 39.31% sampled<br>precision=86.90% positives in sample","random selected 40.34% of all positives in first 40.34% sampled<br>precision=86.90% positives in sample","random selected 41.03% of all positives in first 41.03% sampled<br>precision=86.90% positives in sample","random selected 42.07% of all positives in first 42.07% sampled<br>precision=86.90% positives in sample","random selected 43.10% of all positives in first 43.10% sampled<br>precision=86.90% positives in sample","random selected 44.14% of all positives in first 44.14% sampled<br>precision=86.90% positives in sample","random selected 45.17% of all positives in first 45.17% sampled<br>precision=86.90% positives in sample","random selected 46.21% of all positives in first 46.21% sampled<br>precision=86.90% positives in sample","random selected 47.24% of all positives in first 47.24% sampled<br>precision=86.90% positives in sample","random selected 48.28% of all positives in first 48.28% sampled<br>precision=86.90% positives in sample","random selected 49.31% of all positives in first 49.31% sampled<br>precision=86.90% positives in sample","random selected 50.34% of all positives in first 50.34% sampled<br>precision=86.90% positives in sample","random selected 51.03% of all positives in first 51.03% sampled<br>precision=86.90% positives in sample","random selected 52.07% of all positives in first 52.07% sampled<br>precision=86.90% positives in sample","random selected 53.10% of all positives in first 53.10% sampled<br>precision=86.90% positives in sample","random selected 54.14% of all positives in first 54.14% sampled<br>precision=86.90% positives in sample","random selected 55.17% of all positives in first 55.17% sampled<br>precision=86.90% positives in sample","random selected 56.21% of all positives in first 56.21% sampled<br>precision=86.90% positives in sample","random selected 57.24% of all positives in first 57.24% sampled<br>precision=86.90% positives in sample","random selected 58.28% of all positives in first 58.28% sampled<br>precision=86.90% positives in sample","random selected 59.31% of all positives in first 59.31% sampled<br>precision=86.90% positives in sample","random selected 60.34% of all positives in first 60.34% sampled<br>precision=86.90% positives in sample","random selected 61.03% of all positives in first 61.03% sampled<br>precision=86.90% positives in sample","random selected 62.07% of all positives in first 62.07% sampled<br>precision=86.90% positives in sample","random selected 63.10% of all positives in first 63.10% sampled<br>precision=86.90% positives in sample","random selected 64.14% of all positives in first 64.14% sampled<br>precision=86.90% positives in sample","random selected 65.17% of all positives in first 65.17% sampled<br>precision=86.90% positives in sample","random selected 66.21% of all positives in first 66.21% sampled<br>precision=86.90% positives in sample","random selected 67.24% of all positives in first 67.24% sampled<br>precision=86.90% positives in sample","random selected 68.28% of all positives in first 68.28% sampled<br>precision=86.90% positives in sample","random selected 69.31% of all positives in first 69.31% sampled<br>precision=86.90% positives in sample","random selected 70.34% of all positives in first 70.34% sampled<br>precision=86.90% positives in sample","random selected 71.03% of all positives in first 71.03% sampled<br>precision=86.90% positives in sample","random selected 72.07% of all positives in first 72.07% sampled<br>precision=86.90% positives in sample","random selected 73.10% of all positives in first 73.10% sampled<br>precision=86.90% positives in sample","random selected 74.14% of all positives in first 74.14% sampled<br>precision=86.90% positives in sample","random selected 75.17% of all positives in first 75.17% sampled<br>precision=86.90% positives in sample","random selected 76.21% of all positives in first 76.21% sampled<br>precision=86.90% positives in sample","random selected 77.24% of all positives in first 77.24% sampled<br>precision=86.90% positives in sample","random selected 78.28% of all positives in first 78.28% sampled<br>precision=86.90% positives in sample","random selected 79.31% of all positives in first 79.31% sampled<br>precision=86.90% positives in sample","random selected 80.34% of all positives in first 80.34% sampled<br>precision=86.90% positives in sample","random selected 81.03% of all positives in first 81.03% sampled<br>precision=86.90% positives in sample","random selected 82.07% of all positives in first 82.07% sampled<br>precision=86.90% positives in sample","random selected 83.10% of all positives in first 83.10% sampled<br>precision=86.90% positives in sample","random selected 84.14% of all positives in first 84.14% sampled<br>precision=86.90% positives in sample","random selected 85.17% of all positives in first 85.17% sampled<br>precision=86.90% positives in sample","random selected 86.21% of all positives in first 86.21% sampled<br>precision=86.90% positives in sample","random selected 87.24% of all positives in first 87.24% sampled<br>precision=86.90% positives in sample","random selected 88.28% of all positives in first 88.28% sampled<br>precision=86.90% positives in sample","random selected 89.31% of all positives in first 89.31% sampled<br>precision=86.90% positives in sample","random selected 90.34% of all positives in first 90.34% sampled<br>precision=86.90% positives in sample","random selected 91.03% of all positives in first 91.03% sampled<br>precision=86.90% positives in sample","random selected 92.07% of all positives in first 92.07% sampled<br>precision=86.90% positives in sample","random selected 93.10% of all positives in first 93.10% sampled<br>precision=86.90% positives in sample","random selected 94.14% of all positives in first 94.14% sampled<br>precision=86.90% positives in sample","random selected 95.17% of all positives in first 95.17% sampled<br>precision=86.90% positives in sample","random selected 96.21% of all positives in first 96.21% sampled<br>precision=86.90% positives in sample","random selected 97.24% of all positives in first 97.24% sampled<br>precision=86.90% positives in sample","random selected 98.28% of all positives in first 98.28% sampled<br>precision=86.90% positives in sample","random selected 99.31% of all positives in first 99.31% sampled<br>precision=86.90% positives in sample"],"x":[0.3448276,1.0344827,2.0689654,3.1034484,4.137931,5.172414,6.206897,7.2413793,8.275862,9.310345,10.344828,11.034483,12.068966,13.103448,14.137931,15.172414,16.206896,17.241379,18.275862,19.310345,20.344828,21.034483,22.068966,23.103449,24.137932,25.172413,26.206896,27.241379,28.275862,29.310345,30.344828,31.034483,32.068966,33.103447,34.13793,35.172413,36.206898,37.24138,38.275864,39.310345,40.344826,41.03448,42.068966,43.103447,44.13793,45.172413,46.206898,47.24138,48.275864,49.310345,50.344826,51.03448,52.068966,53.103447,54.13793,55.172413,56.206898,57.24138,58.275864,59.310345,60.344826,61.03448,62.068966,63.103447,64.13793,65.17242,66.206894,67.24138,68.27586,69.31035,70.344826,71.034485,72.06896,73.10345,74.13793,75.17242,76.206894,77.24138,78.27586,79.31035,80.344826,81.034485,82.06896,83.10345,84.13793,85.17242,86.206894,87.24138,88.27586,89.31035,90.344826,91.034485,92.06896,93.10345,94.13793,95.17242,96.206894,97.24138,98.27586,99.31035],"y":[0.34,1.03,2.07,3.1,4.14,5.17,6.21,7.24,8.28,9.31,10.34,11.03,12.07,13.1,14.14,15.17,16.21,17.24,18.28,19.31,20.34,21.03,22.07,23.1,24.14,25.17,26.21,27.24,28.28,29.31,30.34,31.03,32.07,33.1,34.14,35.17,36.21,37.24,38.28,39.31,40.34,41.03,42.07,43.1,44.14,45.17,46.21,47.24,48.28,49.31,50.34,51.03,52.07,53.1,54.14,55.17,56.21,57.24,58.28,59.31,60.34,61.03,62.07,63.1,64.14,65.17,66.21,67.24,68.28,69.31,70.34,71.03,72.07,73.1,74.14,75.17,76.21,77.24,78.28,79.31,80.34,81.03,82.07,83.1,84.14,85.17,86.21,87.24,88.28,89.31,90.34,91.03,92.07,93.1,94.14,95.17,96.21,97.24,98.28,99.31],"type":"scatter"}],                        {"template":{"data":{"scatter":[{"type":"scatter"}]}},"title":{"font":{"size":18},"text":"Lift curve","x":0.5},"xaxis":{"title":{"text":"Percentage sampled"},"spikemode":"across","range":[0,100]},"yaxis":{"title":{"text":"Percentage of positive"}},"hovermode":"x","plot_bgcolor":"#fff","legend":{"xanchor":"center","y":0.9,"x":0.1},"shapes":[{"type":"line","x0":91.034485,"x1":91.034485,"xref":"x","y0":0,"y1":100.0,"yref":"y"}],"annotations":[{"text":"cutoff=0.50","x":91.034485,"y":5,"yref":"y"},{"align":"right","showarrow":false,"text":"Model: 248 out 264 (93.94%)","x":0.5,"xanchor":"left","xref":"paper","y":0.4,"yanchor":"top","yref":"paper"},{"align":"right","showarrow":false,"text":"Random: 229 out 264 (86.90%)","x":0.5,"xanchor":"left","xref":"paper","y":0.33,"yanchor":"top","yref":"paper"},{"align":"right","showarrow":false,"text":"Lift: 1.1","x":0.5,"xanchor":"left","xref":"paper","y":0.26,"yanchor":"top","yref":"paper"}],"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Cumulative Precision</h3><h6 class="card-subtitle">Expected distribution for highest scores</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="3e340c5a-a70e-46b2-af21-c3b425c62b19" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("3e340c5a-a70e-46b2-af21-c3b425c62b19")) {                    Plotly.newPlot(                        "3e340c5a-a70e-46b2-af21-c3b425c62b19",                        [{"hoverinfo":"text","showlegend":false,"text":["percentage sampled = top 0.34%","percentage sampled = top 1.03%","percentage sampled = top 2.07%","percentage sampled = top 3.10%","percentage sampled = top 4.14%","percentage sampled = top 5.17%","percentage sampled = top 6.21%","percentage sampled = top 7.24%","percentage sampled = top 8.28%","percentage sampled = top 9.31%","percentage sampled = top 10.34%","percentage sampled = top 11.03%","percentage sampled = top 12.07%","percentage sampled = top 13.10%","percentage sampled = top 14.14%","percentage sampled = top 15.17%","percentage sampled = top 16.21%","percentage sampled = top 17.24%","percentage sampled = top 18.28%","percentage sampled = top 19.31%","percentage sampled = top 20.34%","percentage sampled = top 21.03%","percentage sampled = top 22.07%","percentage sampled = top 23.10%","percentage sampled = top 24.14%","percentage sampled = top 25.17%","percentage sampled = top 26.21%","percentage sampled = top 27.24%","percentage sampled = top 28.28%","percentage sampled = top 29.31%","percentage sampled = top 30.34%","percentage sampled = top 31.03%","percentage sampled = top 32.07%","percentage sampled = top 33.10%","percentage sampled = top 34.14%","percentage sampled = top 35.17%","percentage sampled = top 36.21%","percentage sampled = top 37.24%","percentage sampled = top 38.28%","percentage sampled = top 39.31%","percentage sampled = top 40.34%","percentage sampled = top 41.03%","percentage sampled = top 42.07%","percentage sampled = top 43.10%","percentage sampled = top 44.14%","percentage sampled = top 45.17%","percentage sampled = top 46.21%","percentage sampled = top 47.24%","percentage sampled = top 48.28%","percentage sampled = top 49.31%","percentage sampled = top 50.34%","percentage sampled = top 51.03%","percentage sampled = top 52.07%","percentage sampled = top 53.10%","percentage sampled = top 54.14%","percentage sampled = top 55.17%","percentage sampled = top 56.21%","percentage sampled = top 57.24%","percentage sampled = top 58.28%","percentage sampled = top 59.31%","percentage sampled = top 60.34%","percentage sampled = top 61.03%","percentage sampled = top 62.07%","percentage sampled = top 63.10%","percentage sampled = top 64.14%","percentage sampled = top 65.17%","percentage sampled = top 66.21%","percentage sampled = top 67.24%","percentage sampled = top 68.28%","percentage sampled = top 69.31%","percentage sampled = top 70.34%","percentage sampled = top 71.03%","percentage sampled = top 72.07%","percentage sampled = top 73.10%","percentage sampled = top 74.14%","percentage sampled = top 75.17%","percentage sampled = top 76.21%","percentage sampled = top 77.24%","percentage sampled = top 78.28%","percentage sampled = top 79.31%","percentage sampled = top 80.34%","percentage sampled = top 81.03%","percentage sampled = top 82.07%","percentage sampled = top 83.10%","percentage sampled = top 84.14%","percentage sampled = top 85.17%","percentage sampled = top 86.21%","percentage sampled = top 87.24%","percentage sampled = top 88.28%","percentage sampled = top 89.31%","percentage sampled = top 90.34%","percentage sampled = top 91.03%","percentage sampled = top 92.07%","percentage sampled = top 93.10%","percentage sampled = top 94.14%","percentage sampled = top 95.17%","percentage sampled = top 96.21%","percentage sampled = top 97.24%","percentage sampled = top 98.28%","percentage sampled = top 99.31%"],"x":[0.3448276,1.0344827,2.0689654,3.1034484,4.137931,5.172414,6.206897,7.2413793,8.275862,9.310345,10.344828,11.034483,12.068966,13.103448,14.137931,15.172414,16.206896,17.241379,18.275862,19.310345,20.344828,21.034483,22.068966,23.103449,24.137932,25.172413,26.206896,27.241379,28.275862,29.310345,30.344828,31.034483,32.068966,33.103447,34.13793,35.172413,36.206898,37.24138,38.275864,39.310345,40.344826,41.03448,42.068966,43.103447,44.13793,45.172413,46.206898,47.24138,48.275864,49.310345,50.344826,51.03448,52.068966,53.103447,54.13793,55.172413,56.206898,57.24138,58.275864,59.310345,60.344826,61.03448,62.068966,63.103447,64.13793,65.17242,66.206894,67.24138,68.27586,69.31035,70.344826,71.034485,72.06896,73.10345,74.13793,75.17242,76.206894,77.24138,78.27586,79.31035,80.344826,81.034485,82.06896,83.10345,84.13793,85.17242,86.206894,87.24138,88.27586,89.31035,90.344826,91.034485,92.06896,93.10345,94.13793,95.17242,96.206894,97.24138,98.27586,99.31035],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scatter"},{"fill":"tozeroy","hoverinfo":"text","name":"1","text":["percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=100.00%","percentage 1=98.31%","percentage 1=98.36%","percentage 1=98.44%","percentage 1=98.51%","percentage 1=98.57%","percentage 1=98.63%","percentage 1=98.68%","percentage 1=98.73%","percentage 1=97.56%","percentage 1=97.65%","percentage 1=97.73%","percentage 1=97.78%","percentage 1=97.85%","percentage 1=97.92%","percentage 1=97.98%","percentage 1=98.04%","percentage 1=98.10%","percentage 1=98.15%","percentage 1=98.20%","percentage 1=98.25%","percentage 1=98.29%","percentage 1=97.48%","percentage 1=97.54%","percentage 1=97.60%","percentage 1=97.66%","percentage 1=97.71%","percentage 1=97.76%","percentage 1=97.81%","percentage 1=97.86%","percentage 1=97.90%","percentage 1=97.95%","percentage 1=97.97%","percentage 1=97.35%","percentage 1=97.40%","percentage 1=97.45%","percentage 1=97.50%","percentage 1=97.55%","percentage 1=97.59%","percentage 1=97.63%","percentage 1=97.67%","percentage 1=97.71%","percentage 1=97.74%","percentage 1=97.78%","percentage 1=97.81%","percentage 1=97.85%","percentage 1=97.88%","percentage 1=97.40%","percentage 1=97.44%","percentage 1=97.47%","percentage 1=97.51%","percentage 1=97.06%","percentage 1=97.09%","percentage 1=96.65%","percentage 1=96.23%","percentage 1=96.28%","percentage 1=95.87%","percentage 1=95.48%","percentage 1=95.54%","percentage 1=95.15%","percentage 1=95.22%","percentage 1=95.28%","percentage 1=95.32%","percentage 1=95.38%","percentage 1=95.02%","percentage 1=95.08%","percentage 1=94.74%","percentage 1=94.80%","percentage 1=94.86%","percentage 1=94.53%","percentage 1=93.82%","percentage 1=93.89%","percentage 1=93.94%","percentage 1=93.63%","percentage 1=93.33%","percentage 1=92.31%","percentage 1=91.30%","percentage 1=90.32%","percentage 1=89.36%","percentage 1=88.42%","percentage 1=87.50%"],"x":[0.3448276,1.0344827,2.0689654,3.1034484,4.137931,5.172414,6.206897,7.2413793,8.275862,9.310345,10.344828,11.034483,12.068966,13.103448,14.137931,15.172414,16.206896,17.241379,18.275862,19.310345,20.344828,21.034483,22.068966,23.103449,24.137932,25.172413,26.206896,27.241379,28.275862,29.310345,30.344828,31.034483,32.068966,33.103447,34.13793,35.172413,36.206898,37.24138,38.275864,39.310345,40.344826,41.03448,42.068966,43.103447,44.13793,45.172413,46.206898,47.24138,48.275864,49.310345,50.344826,51.03448,52.068966,53.103447,54.13793,55.172413,56.206898,57.24138,58.275864,59.310345,60.344826,61.03448,62.068966,63.103447,64.13793,65.17242,66.206894,67.24138,68.27586,69.31035,70.344826,71.034485,72.06896,73.10345,74.13793,75.17242,76.206894,77.24138,78.27586,79.31035,80.344826,81.034485,82.06896,83.10345,84.13793,85.17242,86.206894,87.24138,88.27586,89.31035,90.344826,91.034485,92.06896,93.10345,94.13793,95.17242,96.206894,97.24138,98.27586,99.31035],"y":[100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,98.30508474576271,98.36065573770492,98.4375,98.50746268656717,98.57142857142857,98.63013698630137,98.6842105263158,98.73417721518987,97.5609756097561,97.6470588235294,97.72727272727273,97.77777777777777,97.84946236559139,97.91666666666667,97.97979797979798,98.03921568627452,98.0952380952381,98.14814814814815,98.1981981981982,98.24561403508773,98.2905982905983,97.47899159663865,97.54098360655738,97.6,97.65625,97.70992366412214,97.76119402985074,97.81021897810218,97.85714285714286,97.9020979020979,97.94520547945206,97.97297297297297,97.35099337748345,97.40259740259741,97.45222929936305,97.5,97.54601226993866,97.59036144578313,97.63313609467455,97.67441860465117,97.71428571428571,97.74011299435028,97.77777777777777,97.81420765027322,97.84946236559139,97.88359788359789,97.39583333333333,97.43589743589743,97.47474747474747,97.51243781094527,97.05882352941177,97.0873786407767,96.65071770334929,96.22641509433963,96.27906976744185,95.87155963302752,95.47511312217195,95.53571428571429,95.15418502202643,95.21739130434783,95.27896995708154,95.31914893617021,95.3781512605042,95.02074688796681,95.08196721311475,94.73684210526316,94.8,94.86166007905139,94.53125,93.82239382239382,93.89312977099236,93.93939393939394,93.63295880149813,93.33333333333333,92.3076923076923,91.30434782608695,90.3225806451613,89.36170212765957,88.42105263157895,87.5],"type":"scatter"},{"fill":"tonexty","hoverinfo":"text","name":"0","text":["percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=0.00%","percentage 0=1.69%","percentage 0=1.64%","percentage 0=1.56%","percentage 0=1.49%","percentage 0=1.43%","percentage 0=1.37%","percentage 0=1.32%","percentage 0=1.27%","percentage 0=2.44%","percentage 0=2.35%","percentage 0=2.27%","percentage 0=2.22%","percentage 0=2.15%","percentage 0=2.08%","percentage 0=2.02%","percentage 0=1.96%","percentage 0=1.90%","percentage 0=1.85%","percentage 0=1.80%","percentage 0=1.75%","percentage 0=1.71%","percentage 0=2.52%","percentage 0=2.46%","percentage 0=2.40%","percentage 0=2.34%","percentage 0=2.29%","percentage 0=2.24%","percentage 0=2.19%","percentage 0=2.14%","percentage 0=2.10%","percentage 0=2.05%","percentage 0=2.03%","percentage 0=2.65%","percentage 0=2.60%","percentage 0=2.55%","percentage 0=2.50%","percentage 0=2.45%","percentage 0=2.41%","percentage 0=2.37%","percentage 0=2.33%","percentage 0=2.29%","percentage 0=2.26%","percentage 0=2.22%","percentage 0=2.19%","percentage 0=2.15%","percentage 0=2.12%","percentage 0=2.60%","percentage 0=2.56%","percentage 0=2.53%","percentage 0=2.49%","percentage 0=2.94%","percentage 0=2.91%","percentage 0=3.35%","percentage 0=3.77%","percentage 0=3.72%","percentage 0=4.13%","percentage 0=4.52%","percentage 0=4.46%","percentage 0=4.85%","percentage 0=4.78%","percentage 0=4.72%","percentage 0=4.68%","percentage 0=4.62%","percentage 0=4.98%","percentage 0=4.92%","percentage 0=5.26%","percentage 0=5.20%","percentage 0=5.14%","percentage 0=5.47%","percentage 0=6.18%","percentage 0=6.11%","percentage 0=6.06%","percentage 0=6.37%","percentage 0=6.67%","percentage 0=7.69%","percentage 0=8.70%","percentage 0=9.68%","percentage 0=10.64%","percentage 0=11.58%","percentage 0=12.50%"],"x":[0.3448276,1.0344827,2.0689654,3.1034484,4.137931,5.172414,6.206897,7.2413793,8.275862,9.310345,10.344828,11.034483,12.068966,13.103448,14.137931,15.172414,16.206896,17.241379,18.275862,19.310345,20.344828,21.034483,22.068966,23.103449,24.137932,25.172413,26.206896,27.241379,28.275862,29.310345,30.344828,31.034483,32.068966,33.103447,34.13793,35.172413,36.206898,37.24138,38.275864,39.310345,40.344826,41.03448,42.068966,43.103447,44.13793,45.172413,46.206898,47.24138,48.275864,49.310345,50.344826,51.03448,52.068966,53.103447,54.13793,55.172413,56.206898,57.24138,58.275864,59.310345,60.344826,61.03448,62.068966,63.103447,64.13793,65.17242,66.206894,67.24138,68.27586,69.31035,70.344826,71.034485,72.06896,73.10345,74.13793,75.17242,76.206894,77.24138,78.27586,79.31035,80.344826,81.034485,82.06896,83.10345,84.13793,85.17242,86.206894,87.24138,88.27586,89.31035,90.344826,91.034485,92.06896,93.10345,94.13793,95.17242,96.206894,97.24138,98.27586,99.31035],"y":[100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0],"type":"scatter"}],                        {"template":{"data":{"scatter":[{"type":"scatter"}]}},"title":{"font":{"size":18},"text":"Cumulative percentage per category<br>when sampling top X%","x":0.5},"xaxis":{"title":{"text":"Top X% model scores"},"spikemode":"across","range":[0,100],"nticks":10},"yaxis":{"title":{"text":"Cumulative precision per category"}},"hovermode":"x","plot_bgcolor":"#fff","margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab2"
+     role="tabpanel" aria-labelledby="myTab2-tab"> <div><H1>Individual Predictions</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Select Random Index</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+Selected index: <b>None</b>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Prediction</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+no index selected
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Plot</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>no index selected</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Partial Dependence Plot</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="02ee5fd9-2f1b-4ed1-898e-831241cd11fc" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("02ee5fd9-2f1b-4ed1-898e-831241cd11fc")) {                    Plotly.newPlot(                        "02ee5fd9-2f1b-4ed1-898e-831241cd11fc",                        [{"line":{"color":"grey","width":4},"mode":"lines+markers","name":"average prediction <br>for different values of <br>School Backlogs_1","x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[98.13,96.26,96.96,97.5,93.17,0.1],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99426786837803,99.99428077847165,99.99477238391164,99.9948849706549,99.91898474205581,0.08679099812843845],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[92.6344049168624,92.16229558890885,86.56264535482634,82.60169277496774,69.24857547723718,0.025426106506837125],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.994924805567,99.99423852860569,99.99659047725723,99.99633383676962,99.8848797513595,0.04854433844277412],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.96351432347227,99.96982513551575,99.9525083463316,99.9525083463316,99.77875875317525,0.22233170267477012],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.55653128563232,99.48394029692862,99.67211580616825,99.70917118342247,99.09778040476687,0.03078487078386114],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.97554866918654,99.97672778716617,99.99380648461269,99.99482535438938,99.9597264752407,0.0732635850312688],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[92.55083635636294,62.218222262310384,74.44540473452881,76.40003898440403,48.249451256512934,0.011804031343853529],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.92533954089252,99.94444910479321,99.91723606509021,99.91723606509021,98.8124056742211,0.1736963075844954],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99847034383336,99.99847034383336,99.99829945079291,99.99832494166913,99.97710554687869,0.14118585614125975],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.76523905390621,99.77028294292624,99.85399357136832,99.86401895103008,99.49398327240642,0.059681169870552025],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[86.77006429291781,42.208457256015,42.7721895081897,61.46690824901819,47.69891446360192,0.09898053037452761],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.96252952804188,99.96644719198191,99.98044232893841,99.96862860410046,98.36595688902139,0.01876692484082887],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99254184484681,99.99319687399658,99.99230665769144,99.99230355639824,99.94363338454001,0.2210875532174348],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.88457944235438,99.86547329244183,99.91482626047627,99.91482132999639,99.60714315277545,0.03556366930135841],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99798162082487,99.9978158950297,99.99775374894524,99.99778741959676,99.96027149014928,0.16340211320116804],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[95.82830204044876,98.25093067399118,99.16541542610676,99.17782302540196,99.00454902762193,0.15640311736394022],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.60754831631162,99.15226432862003,94.89622792137897,97.73077123723067,85.15039697512165,0.019712894703249897],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99071892774009,99.99159633690435,99.99240041321102,99.99286622415606,99.4727443319375,0.047072117900243446],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99826842641923,99.99794536732178,99.99802179964993,99.99807389332844,99.97675703527058,0.17341744467944123],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.98975241747397,99.98839001823308,99.99057734257336,99.98899678784548,99.94783354884038,0.10809594558130729],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.97643276274187,99.97489801061553,99.95313044040674,99.95313044040674,99.20383857211274,0.0688538677458672],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99749621276779,99.99708400713492,99.99710413022133,99.99710413022133,99.98722605059217,0.0533244070702171],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.90514377209442,99.92028456082245,99.95916109100962,99.95452926799643,99.61198429399128,0.1566919629220471],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.9935713305802,99.99197668788584,99.9919671612389,99.99225073947498,99.84303556701694,0.13509120091328466],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99228366759814,99.99229411702365,99.99428727368098,99.99278335608331,99.94445539877631,0.39134712397417315],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[98.92143983928246,99.13483406256111,98.86992697935145,99.75628784482039,96.0087688367325,0.04572175091472121],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.89757697318369,99.88700283215589,99.92540118764097,99.92923600048525,99.37437298377363,0.06463579117027657],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.93605977962994,99.91357601351078,99.92919707599957,99.94266218395238,99.51446267464044,0.06892741615635858],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99710649644233,99.99729124236907,99.99702463487246,99.99677987912732,99.94621323573747,0.06849898380445563],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.98924039087176,99.98739458981451,99.9831010802199,99.96378230575444,99.11204663721331,0.04175235375360132],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99467370485145,99.993817255724,99.99277800764172,99.99288625790564,99.96241235971046,0.2333086659538153],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.97806082629518,99.97737574420813,99.99103613967016,99.9900308956687,99.86604125935345,0.04637064227963143],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99635664917464,99.99625039376238,99.99630706534599,99.99633542445972,99.87215510052792,0.2665876176670532],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99897690026978,99.99897690026978,99.99888012035808,99.99889452133958,99.97704047429352,0.09248012553262693],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[96.64224110076405,97.02695155973883,98.886502340767,98.48257767069246,88.24044113701697,0.08534294794536966],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99529292394843,99.99580944962018,99.9969170761118,99.99694983670875,99.72542733449752,0.18034587206094088],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.98273624926097,99.98277702652862,99.99093632529477,99.99148182248119,99.56760818766121,0.1254345334611015],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[65.39403802367856,28.223374064378,56.6841678760594,68.3186842416171,46.01068266031232,0.08667787116987181],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99427090925576,99.9954754838128,99.9942597824861,99.99336709788568,99.65930442746294,0.18031413149540496],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.40379687048177,99.4448213596397,99.66668560229752,99.67166559406131,96.41242971006572,0.044214292560684314],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.99954343753672,99.99954356587561,99.99933272477266,99.99932944539904,99.9934115350949,0.45149404179525365],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[95.09225476147685,71.92360500404995,82.54491156645834,91.83902352365985,39.1097733231608,0.03917675728005853],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.9562000970004,99.9411074061901,99.94883453041274,99.95938827242739,99.67890910288081,0.10700642160067547],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[71.50476908839043,75.61967624289703,95.56090784342719,92.7571003896255,59.02080047590136,0.018705778302655837],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.91492568153235,99.92172628643382,99.86747881006428,99.86237767950207,95.43267834965705,0.15152468170687494],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.82935287444894,99.88870615395491,99.83320501411215,99.83320501411215,99.57322423937694,0.12849489825145669],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.88356533651714,99.89424140839812,99.98492885426194,99.98868445291895,99.83971934403108,0.08667097619030018],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.98932922944991,99.98945945534,99.96333575952845,99.97568630749932,98.87177505895876,0.03342704172005167],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[99.93231826528692,99.9026601804897,99.93776144581008,99.94951340165711,98.55717516038668,0.029355310796410197],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,1.0,5.0,10.0,15.0,85.0],"y":[98.10902005080698,98.45300937417231,98.87187567888397,98.94875841481866,88.90900328780523,0.10298787596734742],"type":"scatter"}],                        {"plot_bgcolor":"#fff","title":{"text":"pdp plot for School Backlogs_1"},"xaxis":{"title":{"text":"School Backlogs_1"}},"yaxis":{"title":{"text":"Predicted Decision Name (Predicted %)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"showlegend":false,"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Table</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>no index selected</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab3"
+     role="tabpanel" aria-labelledby="myTab3-tab"> <div><div><H1>What if...</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Select Random Index</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+Selected index: <b>None</b>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Prediction</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>input data incorrect</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Feature Input</h3><h6 class="card-subtitle">Adjust the feature values to change the prediction</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+Selected: <b>None</b>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="School Backlogs_1">School Backlogs_1</label>
+    <input id="School Backlogs_1" type="text" value="None" name="School Backlogs_1" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="GRE Verbal">GRE Verbal</label>
+    <input id="GRE Verbal" type="text" value="None" name="GRE Verbal" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Gap_from_last_job">Gap_from_last_job</label>
+    <input id="Gap_from_last_job" type="text" value="None" name="Gap_from_last_job" disabled>
+</div>
+    
+</div>
+        
+<div class="col">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="School GPA (Recalculated)_1">School GPA (Recalculated)_1</label>
+    <input id="School GPA (Recalculated)_1" type="text" value="None" name="School GPA (Recalculated)_1" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="latest_school_duration_in_year">latest_school_duration_in_year</label>
+    <input id="latest_school_duration_in_year" type="text" value="None" name="latest_school_duration_in_year" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="GRE Analytical Writing">GRE Analytical Writing</label>
+    <input id="GRE Analytical Writing" type="text" value="None" name="GRE Analytical Writing" disabled>
+</div>
+    
+</div>
+        
+<div class="col">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="School_Gap_in_Years">School_Gap_in_Years</label>
+    <input id="School_Gap_in_Years" type="text" value="None" name="School_Gap_in_Years" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Total_experience_years">Total_experience_years</label>
+    <input id="Total_experience_years" type="text" value="None" name="Total_experience_years" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="GRE Quantitative">GRE Quantitative</label>
+    <input id="GRE Quantitative" type="text" value="None" name="GRE Quantitative" disabled>
+</div>
+    
+</div>
+        
+<div class="col">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="Converted English Prof Score">Converted English Prof Score</label>
+    <input id="Converted English Prof Score" type="text" value="None" name="Converted English Prof Score" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="School Major Category_1">School Major Category_1</label>
+    <input id="School Major Category_1" type="text" value="None" name="School Major Category_1" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Standardized test given">Standardized test given</label>
+    <input id="Standardized test given" type="text" value="None" name="Standardized test given" disabled>
+</div>
+    
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Plot</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>input data incorrect</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Partial Dependence Plot</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>input data incorrect</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Table</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>input data incorrect</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="tab-pane " id="myTab4"
+     role="tabpanel" aria-labelledby="myTab4-tab"> <div><H1>Feature Dependence</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Shap Summary</h3><h6 class="card-subtitle">Ordering features by shap value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="bb93c979-f97c-480f-b645-57875789dce7" class="plotly-graph-div" style="height:440px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("bb93c979-f97c-480f-b645-57875789dce7")) {                    Plotly.newPlot(                        "bb93c979-f97c-480f-b645-57875789dce7",                        [{"hoverinfo":"text","orientation":"h","x":[0.00002260103819948937,0.002589844407754172,0.0033479873353471144,0.0036782292007155244,0.004003937565569542,0.00677944745897733,0.007167736742437671,0.01114234924613737,0.012224432570849817,0.01405240408867882,0.03675105592331079,0.116989510541209],"y":["12. Standardized test given","11. GRE Quantitative","10. GRE Analytical Writing","9. Gap_from_last_job","8. School Major Category_1","7. Total_experience_years","6. latest_school_duration_in_year","5. GRE Verbal","4. Converted English Prof Score","3. School_Gap_in_Years","2. School GPA (Recalculated)_1","1. School Backlogs_1"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average impact on predicted Decision Name<br>(mean absolute SHAP value)"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":""}},"height":440,"margin":{"b":40,"l":210,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Shap Dependence</h3><h6 class="card-subtitle">Relationship between feature value and SHAP value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>                <div id="aa363392-5a28-4f0c-9003-0a483f0aa7c4" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("aa363392-5a28-4f0c-9003-0a483f0aa7c4")) {                    Plotly.newPlot(                        "aa363392-5a28-4f0c-9003-0a483f0aa7c4",                        [{"hoverinfo":"text","marker":{"color":[2.96,3.24,2.05,3.7,3.02,2.7,3.55,3.45,2.54,3.63,3.18,2.47,2.8,2.64,3.12,3.0,3.15,2.65,3.12,2.26,3.16,3.07,3.58,3.3,3.0,2.37,2.3,2.43,2.59,3.55,2.98,3.35,2.65,3.11,2.65,2.72,1.84,2.65,2.61,3.385,3.27,3.73,3.05,2.7,3.05,2.6,3.16,2.71,2.9,2.74,2.65,2.88,2.72,3.03,3.05,3.5,3.0,2.9,2.9,3.29,3.25,3.87,3.5,3.0,3.05,2.69,3.42,3.25,3.29,2.82,2.25,2.65,2.85,3.67,3.12,2.93,3.1,3.39,2.86,3.12,2.38,3.1,2.89,3.0,3.88,3.1,2.74,3.2,2.95,3.13,2.92,2.5,3.21,3.32,2.67,3.68,3.15,2.86,3.95,3.12,3.04,3.36,3.45,2.39,3.2,2.29,2.85,2.53,3.02,3.5,3.1,2.9,3.0,2.2,3.25,2.72,2.8,3.82,3.12,3.2,3.5,2.75,2.6,2.76,3.13,3.6,3.1,2.53,3.54,2.82,3.0,2.87,1.8,2.5,3.63,3.22,2.96,3.33,2.57,3.5,2.94,3.15,2.4,3.05,2.37,2.78,3.26,3.46,2.64,3.0,3.08,3.76,2.9,2.06,3.58,2.89,3.08,3.89,3.37,3.06,2.45,3.21,3.0,2.6,3.13,2.21,3.105,3.15,3.2,2.63,3.62,3.12,3.35,2.74,2.3,2.51,3.66,2.9,3.27,2.34,2.78,3.12,2.64,2.82,2.89,2.76,2.6,3.101,2.76,3.15,3.35,3.04,3.174,2.92,2.9,3.43,3.11,2.7,2.35,3.25,2.86,2.93,2.96,3.3,3.05,2.35,3.21,2.57,2.58,2.73,3.55,3.13,3.78,2.5,1.99,3.07,2.3,3.13,2.96,2.9,3.0,3.25,2.06,3.41,2.8,2.66,2.65,2.56,3.15,3.61,3.1,2.6,3.11,3.02,3.05,2.93,3.2,3.24,3.94,3.05,3.22,2.82,2.99,2.53,3.39,3.35,3.31,2.72,2.85,2.55,3.0,2.67,2.37,2.82,3.0,2.55,2.8,3.45,2.31,2.65,2.56,3.01,2.95,2.9,2.91,2.55,2.71,2.79,2.83,3.0,2.91,2.66,2.9,2.9,2.6,3.48,2.37,3.2,2.72,3.46,2.75,2.9,3.38,3.05,2.84,1.4,2.58,3.12,3.34,2.75],"colorbar":{"title":{"text":"School GPA (Recalculated)_1"}},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"opacity":0.6,"showscale":true,"size":7},"mode":"markers","text":["None=3543<br>School Backlogs_1=10.0<br>School GPA (Recalculated)_1=2.96<br>SHAP=0.066","None=2358<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.24<br>SHAP=0.062","None=6457<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.05<br>SHAP=0.088","None=2405<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.7<br>SHAP=0.059","None=6825<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.02<br>SHAP=0.056","None=2610<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.7<br>SHAP=0.059","None=5506<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.55<br>SHAP=0.069","None=2607<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.45<br>SHAP=0.057","None=1690<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.54<br>SHAP=0.027","None=296<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.63<br>SHAP=0.059","None=4197<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.18<br>SHAP=0.072","None=2401<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.47<br>SHAP=0.061","None=5486<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.8<br>SHAP=0.065","None=7195<br>School Backlogs_1=9.0<br>School GPA (Recalculated)_1=2.64<br>SHAP=0.072","None=803<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.12<br>SHAP=0.072","None=4339<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.058","None=4216<br>School Backlogs_1=18.0<br>School GPA (Recalculated)_1=3.15<br>SHAP=0.046","None=945<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=2.65<br>SHAP=0.071","None=4080<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.12<br>SHAP=0.065","None=6856<br>School Backlogs_1=20.0<br>School GPA (Recalculated)_1=2.26<br>SHAP=-0.350","None=1489<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.16<br>SHAP=0.070","None=6034<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.07<br>SHAP=0.060","None=5593<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.58<br>SHAP=0.058","None=3266<br>School Backlogs_1=4.0<br>School GPA (Recalculated)_1=3.3<br>SHAP=0.062","None=6999<br>School Backlogs_1=18.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.050","None=2022<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.37<br>SHAP=0.065","None=5973<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.3<br>SHAP=0.074","None=5538<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.43<br>SHAP=0.090","None=263<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.59<br>SHAP=0.071","None=601<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.55<br>SHAP=0.075","None=625<br>School Backlogs_1=8.0<br>School GPA (Recalculated)_1=2.98<br>SHAP=0.062","None=2086<br>School Backlogs_1=5.0<br>School GPA (Recalculated)_1=3.35<br>SHAP=0.062","None=2284<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.65<br>SHAP=0.058","None=5852<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.11<br>SHAP=0.071","None=3358<br>School Backlogs_1=14.0<br>School GPA (Recalculated)_1=2.65<br>SHAP=0.056","None=1763<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.72<br>SHAP=0.075","None=7188<br>School Backlogs_1=31.0<br>School GPA (Recalculated)_1=1.84<br>SHAP=-0.797","None=1984<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.65<br>SHAP=0.068","None=4726<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.61<br>SHAP=0.063","None=2384<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.385<br>SHAP=0.065","None=6441<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.27<br>SHAP=0.064","None=1624<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.73<br>SHAP=0.059","None=6278<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.05<br>SHAP=0.061","None=4533<br>School Backlogs_1=9.0<br>School GPA (Recalculated)_1=2.7<br>SHAP=0.072","None=5234<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.05<br>SHAP=0.069","None=5007<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.6<br>SHAP=0.081","None=1492<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.16<br>SHAP=0.063","None=2110<br>School Backlogs_1=4.0<br>School GPA (Recalculated)_1=2.71<br>SHAP=0.064","None=31<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.057","None=712<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.74<br>SHAP=0.063","None=4370<br>School Backlogs_1=31.0<br>School GPA (Recalculated)_1=2.65<br>SHAP=-0.716","None=1225<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=2.88<br>SHAP=0.063","None=438<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.72<br>SHAP=0.067","None=2476<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.03<br>SHAP=0.053","None=5844<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.05<br>SHAP=0.063","None=1332<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.5<br>SHAP=0.067","None=5522<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.053","None=92<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.067","None=3223<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.063","None=3826<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=3.29<br>SHAP=0.059","None=6547<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.25<br>SHAP=0.058","None=5498<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.87<br>SHAP=0.064","None=1755<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.5<br>SHAP=0.058","None=4176<br>School Backlogs_1=3.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.077","None=2881<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.05<br>SHAP=0.055","None=5306<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=2.69<br>SHAP=0.063","None=2909<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.42<br>SHAP=0.069","None=2859<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.25<br>SHAP=0.072","None=2503<br>School Backlogs_1=2.0<br>School GPA (Recalculated)_1=3.29<br>SHAP=0.060","None=5170<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.82<br>SHAP=0.059","None=4126<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.25<br>SHAP=0.081","None=2120<br>School Backlogs_1=19.0<br>School GPA (Recalculated)_1=2.65<br>SHAP=0.022","None=2795<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=2.85<br>SHAP=0.059","None=4672<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.67<br>SHAP=0.070","None=1600<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.12<br>SHAP=0.061","None=7273<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.93<br>SHAP=0.070","None=6471<br>School Backlogs_1=5.0<br>School GPA (Recalculated)_1=3.1<br>SHAP=0.073","None=5859<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.39<br>SHAP=0.062","None=2513<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=2.86<br>SHAP=0.069","None=175<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.12<br>SHAP=0.066","None=2001<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.38<br>SHAP=0.077","None=1773<br>School Backlogs_1=4.0<br>School GPA (Recalculated)_1=3.1<br>SHAP=0.056","None=4836<br>School Backlogs_1=36.0<br>School GPA (Recalculated)_1=2.89<br>SHAP=-0.833","None=477<br>School Backlogs_1=15.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.052","None=964<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.88<br>SHAP=0.071","None=1772<br>School Backlogs_1=4.0<br>School GPA (Recalculated)_1=3.1<br>SHAP=0.062","None=5420<br>School Backlogs_1=17.0<br>School GPA (Recalculated)_1=2.74<br>SHAP=0.027","None=427<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.2<br>SHAP=0.064","None=1022<br>School Backlogs_1=4.0<br>School GPA (Recalculated)_1=2.95<br>SHAP=0.083","None=4436<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.13<br>SHAP=0.076","None=2750<br>School Backlogs_1=24.0<br>School GPA (Recalculated)_1=2.92<br>SHAP=-0.827","None=2171<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.5<br>SHAP=0.078","None=3741<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.21<br>SHAP=0.063","None=1916<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.32<br>SHAP=0.064","None=463<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=2.67<br>SHAP=0.062","None=6129<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.68<br>SHAP=0.060","None=54<br>School Backlogs_1=3.0<br>School GPA (Recalculated)_1=3.15<br>SHAP=0.058","None=2245<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.86<br>SHAP=0.066","None=6874<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.95<br>SHAP=0.061","None=804<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.12<br>SHAP=0.077","None=2831<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=3.04<br>SHAP=0.058","None=139<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.36<br>SHAP=0.063","None=5297<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.45<br>SHAP=0.060","None=760<br>School Backlogs_1=32.0<br>School GPA (Recalculated)_1=2.39<br>SHAP=-0.738","None=430<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.2<br>SHAP=0.061","None=2039<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.29<br>SHAP=0.085","None=4740<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.85<br>SHAP=0.074","None=1467<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.53<br>SHAP=0.061","None=3985<br>School Backlogs_1=14.0<br>School GPA (Recalculated)_1=3.02<br>SHAP=0.056","None=1402<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.5<br>SHAP=0.064","None=5277<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=3.1<br>SHAP=0.056","None=6384<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.061","None=2168<br>School Backlogs_1=9.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.057","None=1544<br>School Backlogs_1=39.0<br>School GPA (Recalculated)_1=2.2<br>SHAP=-0.705","None=5684<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.25<br>SHAP=0.060","None=2251<br>School Backlogs_1=15.0<br>School GPA (Recalculated)_1=2.72<br>SHAP=-0.075","None=2700<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=2.8<br>SHAP=0.055","None=1586<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.82<br>SHAP=0.064","None=1523<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.12<br>SHAP=0.060","None=233<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.2<br>SHAP=0.059","None=3072<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.5<br>SHAP=0.066","None=2718<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.75<br>SHAP=0.060","None=106<br>School Backlogs_1=25.0<br>School GPA (Recalculated)_1=2.6<br>SHAP=-0.821","None=456<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=2.76<br>SHAP=0.063","None=83<br>School Backlogs_1=7.0<br>School GPA (Recalculated)_1=3.13<br>SHAP=0.065","None=3272<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.6<br>SHAP=0.059","None=7033<br>School Backlogs_1=7.0<br>School GPA (Recalculated)_1=3.1<br>SHAP=0.059","None=2817<br>School Backlogs_1=18.0<br>School GPA (Recalculated)_1=2.53<br>SHAP=-0.038","None=1411<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.54<br>SHAP=0.063","None=680<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.82<br>SHAP=0.064","None=3099<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.058","None=1855<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.87<br>SHAP=0.062","None=4931<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=1.8<br>SHAP=0.089","None=933<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.5<br>SHAP=0.074","None=3658<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.63<br>SHAP=0.060","None=431<br>School Backlogs_1=12.0<br>School GPA (Recalculated)_1=3.22<br>SHAP=0.062","None=4624<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.96<br>SHAP=0.058","None=182<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.33<br>SHAP=0.059","None=6961<br>School Backlogs_1=10.0<br>School GPA (Recalculated)_1=2.57<br>SHAP=0.081","None=1754<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.5<br>SHAP=0.056","None=7051<br>School Backlogs_1=3.0<br>School GPA (Recalculated)_1=2.94<br>SHAP=0.075","None=3923<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.15<br>SHAP=0.064","None=5573<br>School Backlogs_1=2.0<br>School GPA (Recalculated)_1=2.4<br>SHAP=0.075","None=5523<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.05<br>SHAP=0.062","None=2785<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.37<br>SHAP=0.079","None=6688<br>School Backlogs_1=20.0<br>School GPA (Recalculated)_1=2.78<br>SHAP=-0.102","None=4704<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.26<br>SHAP=0.061","None=465<br>School Backlogs_1=5.0<br>School GPA (Recalculated)_1=3.46<br>SHAP=0.058","None=206<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.64<br>SHAP=0.068","None=2314<br>School Backlogs_1=2.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.070","None=1097<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.08<br>SHAP=0.064","None=2155<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.76<br>SHAP=0.061","None=5397<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.056","None=3122<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.06<br>SHAP=0.074","None=2148<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.58<br>SHAP=0.071","None=1725<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=2.89<br>SHAP=0.056","None=3033<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.08<br>SHAP=0.061","None=2914<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.89<br>SHAP=0.060","None=6023<br>School Backlogs_1=20.0<br>School GPA (Recalculated)_1=3.37<br>SHAP=0.038","None=1389<br>School Backlogs_1=26.0<br>School GPA (Recalculated)_1=3.06<br>SHAP=-0.990","None=2587<br>School Backlogs_1=24.0<br>School GPA (Recalculated)_1=2.45<br>SHAP=-0.623","None=2638<br>School Backlogs_1=15.0<br>School GPA (Recalculated)_1=3.21<br>SHAP=0.049","None=6127<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.057","None=5710<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.6<br>SHAP=0.073","None=2551<br>School Backlogs_1=18.0<br>School GPA (Recalculated)_1=3.13<br>SHAP=0.049","None=6205<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.21<br>SHAP=0.091","None=99<br>School Backlogs_1=12.0<br>School GPA (Recalculated)_1=3.105<br>SHAP=0.061","None=5935<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.15<br>SHAP=0.058","None=1751<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.2<br>SHAP=0.061","None=3949<br>School Backlogs_1=45.0<br>School GPA (Recalculated)_1=2.63<br>SHAP=-0.835","None=2691<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.62<br>SHAP=0.066","None=4945<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=3.12<br>SHAP=0.061","None=3484<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.35<br>SHAP=0.060","None=1986<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.74<br>SHAP=0.077","None=6071<br>School Backlogs_1=12.0<br>School GPA (Recalculated)_1=2.3<br>SHAP=0.077","None=1212<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=2.51<br>SHAP=0.062","None=7139<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.66<br>SHAP=0.060","None=3779<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.057","None=1046<br>School Backlogs_1=3.0<br>School GPA (Recalculated)_1=3.27<br>SHAP=0.061","None=2852<br>School Backlogs_1=85.0<br>School GPA (Recalculated)_1=2.34<br>SHAP=-0.872","None=4392<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.78<br>SHAP=0.073","None=1712<br>School Backlogs_1=28.0<br>School GPA (Recalculated)_1=3.12<br>SHAP=-0.997","None=6832<br>School Backlogs_1=15.0<br>School GPA (Recalculated)_1=2.64<br>SHAP=0.041","None=2246<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=2.82<br>SHAP=0.061","None=535<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=2.89<br>SHAP=0.072","None=7005<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=2.76<br>SHAP=0.067","None=5390<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.6<br>SHAP=0.058","None=4860<br>School Backlogs_1=2.0<br>School GPA (Recalculated)_1=3.101<br>SHAP=0.060","None=6282<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=2.76<br>SHAP=0.062","None=4114<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.15<br>SHAP=0.058","None=5674<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.35<br>SHAP=0.061","None=6355<br>School Backlogs_1=5.0<br>School GPA (Recalculated)_1=3.04<br>SHAP=0.058","None=1557<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.174<br>SHAP=0.072","None=1464<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.92<br>SHAP=0.063","None=6106<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.064","None=4064<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.43<br>SHAP=0.056","None=1157<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.11<br>SHAP=0.052","None=4535<br>School Backlogs_1=9.0<br>School GPA (Recalculated)_1=2.7<br>SHAP=0.074","None=7013<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=2.35<br>SHAP=0.041","None=645<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.25<br>SHAP=0.065","None=113<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.86<br>SHAP=0.063","None=6787<br>School Backlogs_1=7.0<br>School GPA (Recalculated)_1=2.93<br>SHAP=0.069","None=6333<br>School Backlogs_1=8.0<br>School GPA (Recalculated)_1=2.96<br>SHAP=0.098","None=5350<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.3<br>SHAP=0.072","None=5622<br>School Backlogs_1=10.0<br>School GPA (Recalculated)_1=3.05<br>SHAP=0.067","None=5574<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.35<br>SHAP=0.078","None=1488<br>School Backlogs_1=7.0<br>School GPA (Recalculated)_1=3.21<br>SHAP=0.062","None=453<br>School Backlogs_1=42.0<br>School GPA (Recalculated)_1=2.57<br>SHAP=-0.802","None=3754<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.58<br>SHAP=0.064","None=7149<br>School Backlogs_1=9.0<br>School GPA (Recalculated)_1=2.73<br>SHAP=0.072","None=2602<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.55<br>SHAP=0.060","None=6893<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.13<br>SHAP=0.068","None=3323<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.78<br>SHAP=0.055","None=1229<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.5<br>SHAP=0.075","None=1995<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=1.99<br>SHAP=0.080","None=3574<br>School Backlogs_1=2.0<br>School GPA (Recalculated)_1=3.07<br>SHAP=0.060","None=5974<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.3<br>SHAP=0.072","None=4010<br>School Backlogs_1=47.0<br>School GPA (Recalculated)_1=3.13<br>SHAP=-0.896","None=6082<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.96<br>SHAP=0.062","None=7388<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.062","None=1634<br>School Backlogs_1=14.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.058","None=6170<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.25<br>SHAP=0.063","None=3121<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.06<br>SHAP=0.067","None=3135<br>School Backlogs_1=7.0<br>School GPA (Recalculated)_1=3.41<br>SHAP=0.063","None=2004<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.8<br>SHAP=0.062","None=1934<br>School Backlogs_1=30.0<br>School GPA (Recalculated)_1=2.66<br>SHAP=-0.893","None=521<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=2.65<br>SHAP=0.061","None=4487<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.56<br>SHAP=0.070","None=5934<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.15<br>SHAP=0.065","None=4292<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.61<br>SHAP=0.056","None=1141<br>School Backlogs_1=2.0<br>School GPA (Recalculated)_1=3.1<br>SHAP=0.058","None=5081<br>School Backlogs_1=2.0<br>School GPA (Recalculated)_1=2.6<br>SHAP=0.073","None=1158<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.11<br>SHAP=0.053","None=1907<br>School Backlogs_1=7.0<br>School GPA (Recalculated)_1=3.02<br>SHAP=0.062","None=15<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.05<br>SHAP=0.056","None=709<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.93<br>SHAP=0.062","None=235<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.2<br>SHAP=0.066","None=5624<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.24<br>SHAP=0.055","None=6354<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.94<br>SHAP=0.064","None=3258<br>School Backlogs_1=4.0<br>School GPA (Recalculated)_1=3.05<br>SHAP=0.074","None=4104<br>School Backlogs_1=2.0<br>School GPA (Recalculated)_1=3.22<br>SHAP=0.063","None=5275<br>School Backlogs_1=5.0<br>School GPA (Recalculated)_1=2.82<br>SHAP=0.069","None=845<br>School Backlogs_1=2.0<br>School GPA (Recalculated)_1=2.99<br>SHAP=0.068","None=1387<br>School Backlogs_1=3.0<br>School GPA (Recalculated)_1=2.53<br>SHAP=0.064","None=7010<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.39<br>SHAP=0.058","None=1114<br>School Backlogs_1=4.0<br>School GPA (Recalculated)_1=3.35<br>SHAP=0.059","None=2562<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.31<br>SHAP=0.059","None=3598<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.72<br>SHAP=0.064","None=6734<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.85<br>SHAP=0.080","None=4279<br>School Backlogs_1=19.0<br>School GPA (Recalculated)_1=2.55<br>SHAP=0.022","None=5370<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.062","None=1275<br>School Backlogs_1=25.0<br>School GPA (Recalculated)_1=2.67<br>SHAP=-0.892","None=5027<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.37<br>SHAP=0.072","None=3373<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.82<br>SHAP=0.071","None=1359<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.059","None=4671<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.55<br>SHAP=0.065","None=6633<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.8<br>SHAP=0.069","None=3387<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.45<br>SHAP=0.068","None=1517<br>School Backlogs_1=49.0<br>School GPA (Recalculated)_1=2.31<br>SHAP=-0.745","None=7390<br>School Backlogs_1=14.0<br>School GPA (Recalculated)_1=2.65<br>SHAP=-0.000","None=3431<br>School Backlogs_1=11.0<br>School GPA (Recalculated)_1=2.56<br>SHAP=0.071","None=972<br>School Backlogs_1=7.0<br>School GPA (Recalculated)_1=3.01<br>SHAP=0.059","None=3460<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=2.95<br>SHAP=0.064","None=1994<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.065","None=7038<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.91<br>SHAP=0.076","None=4006<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.55<br>SHAP=0.066","None=916<br>School Backlogs_1=5.0<br>School GPA (Recalculated)_1=2.71<br>SHAP=0.058","None=1830<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.79<br>SHAP=0.057","None=1297<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.83<br>SHAP=0.078","None=3654<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.0<br>SHAP=0.073","None=2422<br>School Backlogs_1=10.0<br>School GPA (Recalculated)_1=2.91<br>SHAP=0.062","None=981<br>School Backlogs_1=13.0<br>School GPA (Recalculated)_1=2.66<br>SHAP=0.057","None=6862<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.067","None=1115<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.058","None=647<br>School Backlogs_1=12.0<br>School GPA (Recalculated)_1=2.6<br>SHAP=0.064","None=888<br>School Backlogs_1=1.0<br>School GPA (Recalculated)_1=3.48<br>SHAP=0.065","None=3581<br>School Backlogs_1=3.0<br>School GPA (Recalculated)_1=2.37<br>SHAP=-0.006","None=276<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.2<br>SHAP=0.058","None=2132<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=2.72<br>SHAP=0.094","None=1479<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.46<br>SHAP=0.059","None=7164<br>School Backlogs_1=9.0<br>School GPA (Recalculated)_1=2.75<br>SHAP=0.063","None=1446<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=2.9<br>SHAP=0.058","None=5868<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.38<br>SHAP=0.060","None=2842<br>School Backlogs_1=28.0<br>School GPA (Recalculated)_1=3.05<br>SHAP=-0.916","None=1770<br>School Backlogs_1=3.0<br>School GPA (Recalculated)_1=2.84<br>SHAP=0.062","None=1045<br>School Backlogs_1=43.0<br>School GPA (Recalculated)_1=1.4<br>SHAP=-0.850","None=3685<br>School Backlogs_1=6.0<br>School GPA (Recalculated)_1=2.58<br>SHAP=0.080","None=805<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.12<br>SHAP=0.074","None=2804<br>School Backlogs_1=0.0<br>School GPA (Recalculated)_1=3.34<br>SHAP=0.060","None=3338<br>School Backlogs_1=24.0<br>School GPA (Recalculated)_1=2.75<br>SHAP=-0.726"],"x":[10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,11.0,9.0,0.0,13.0,18.0,13.0,0.0,20.0,0.0,0.0,0.0,4.0,18.0,0.0,0.0,0.0,0.0,0.0,8.0,5.0,0.0,0.0,14.0,0.0,31.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0,0.0,0.0,0.0,4.0,0.0,0.0,31.0,6.0,0.0,0.0,0.0,0.0,0.0,11.0,13.0,13.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,0.0,2.0,0.0,0.0,19.0,13.0,0.0,0.0,0.0,5.0,1.0,1.0,0.0,11.0,4.0,36.0,15.0,0.0,4.0,17.0,0.0,4.0,0.0,24.0,0.0,1.0,0.0,1.0,0.0,3.0,0.0,0.0,0.0,6.0,0.0,0.0,32.0,0.0,0.0,0.0,0.0,14.0,0.0,13.0,1.0,9.0,39.0,0.0,15.0,1.0,0.0,0.0,0.0,0.0,0.0,25.0,6.0,7.0,1.0,7.0,18.0,1.0,11.0,13.0,11.0,0.0,0.0,0.0,12.0,0.0,0.0,10.0,0.0,3.0,0.0,2.0,0.0,0.0,20.0,0.0,5.0,0.0,2.0,1.0,0.0,0.0,0.0,1.0,13.0,0.0,0.0,20.0,26.0,24.0,15.0,0.0,0.0,18.0,0.0,12.0,0.0,0.0,45.0,0.0,6.0,0.0,0.0,12.0,6.0,0.0,0.0,3.0,85.0,11.0,28.0,15.0,13.0,1.0,6.0,11.0,2.0,1.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,9.0,6.0,0.0,0.0,7.0,8.0,0.0,10.0,0.0,7.0,42.0,0.0,9.0,0.0,0.0,0.0,11.0,0.0,2.0,0.0,47.0,0.0,0.0,14.0,0.0,0.0,7.0,0.0,30.0,13.0,0.0,0.0,0.0,2.0,2.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,4.0,2.0,5.0,2.0,3.0,0.0,4.0,1.0,0.0,11.0,19.0,6.0,25.0,0.0,0.0,1.0,0.0,0.0,0.0,49.0,14.0,11.0,7.0,6.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,10.0,13.0,0.0,0.0,12.0,1.0,3.0,0.0,6.0,0.0,9.0,0.0,0.0,28.0,3.0,43.0,6.0,0.0,0.0,24.0],"y":[0.06570790483180663,0.062436525970708506,0.08797158508213951,0.059157324650225815,0.05630234537437899,0.05897319454515706,0.06907353009335418,0.05741099411999112,0.02710838462650292,0.059164871182514386,0.0717352338892872,0.060933276057729795,0.06507043114232516,0.07237058415544911,0.07248405279998203,0.057985791097803635,0.04577751594104147,0.0706237120754772,0.06488827432582071,-0.350441902476875,0.06997858558678974,0.06029116397981691,0.057803330302680755,0.062356311628692686,0.050138038014388646,0.06495554831048461,0.07395427979425012,0.08974749583737979,0.07085346767648278,0.07486881200049388,0.06159180991589878,0.06218848798017392,0.05798323137752319,0.07081019144001258,0.05593875504303497,0.07540936011652824,-0.7966996269239763,0.06826041615270087,0.06336562755762642,0.06453484384842906,0.06431043235255036,0.05884132556106361,0.06063560681066578,0.07225539824553744,0.0689462976470526,0.08083295288227696,0.06287608880815929,0.06371188436542705,0.05689750001550851,0.06296053356949752,-0.7164689464436212,0.06291372326840844,0.06659205154670295,0.05349443291622728,0.06262802095496228,0.06739200216152666,0.053279062496555556,0.06661208520068167,0.06315738554607359,0.05937985794714467,0.05754910367462382,0.06367478373656826,0.05751034207581128,0.07694197093362473,0.055195900454441726,0.06318973799712697,0.06919478052606594,0.07198196141786627,0.05994704903110091,0.05946795730566383,0.08113820838845431,0.022085561911359592,0.05919285109191417,0.06975482035934083,0.06083784046192708,0.07016750331177546,0.07292202566478415,0.06245752299302056,0.06939158862505815,0.06634087082856496,0.07746625673809547,0.05618714981147909,-0.8334646830269284,0.0518518287816103,0.07074960886997034,0.06216970000351,0.026702355890088788,0.06405426910912122,0.083147049129224,0.07582799412058655,-0.8270795448547559,0.0778152307470568,0.06272193421996747,0.06411357469492221,0.06201545353200718,0.0599678600889338,0.058019845825533635,0.06567957204173354,0.06114059102895406,0.07688163112931096,0.057776099727179064,0.06255882564566169,0.060031350234822485,-0.7377022860423961,0.06093167057138306,0.08489405473927408,0.07371088842579067,0.06091317797320351,0.05567262053438285,0.06389975802414503,0.05608851673237221,0.06089013960506943,0.05709454383380307,-0.7053506519686532,0.06026522691108327,-0.0745991846132169,0.05492625303928112,0.06416894122275923,0.05978438344843757,0.05853587166045976,0.06646952379305954,0.059918195006949816,-0.8214623946065016,0.06307543054647317,0.06508284400978924,0.05932598045790228,0.05930228029952114,-0.037866875016998106,0.06256570314409882,0.06425658703316588,0.058336936336496885,0.06214723992805167,0.08860152820576232,0.07435177873869979,0.059533407256813754,0.06184725106487423,0.0575894592618217,0.058614861336170165,0.0805404332524362,0.05582051786832997,0.07461677352782692,0.06376922015196505,0.07528636338914428,0.06222216035411338,0.07929697358339344,-0.10192756452521018,0.060987017172255055,0.05796021421821907,0.06763024802758337,0.0700523037441633,0.06423020144803124,0.06125189099936988,0.05636002137958343,0.07421372710884887,0.07122177502660498,0.056416157088061254,0.060778568824328624,0.05981832273286706,0.03821695800330701,-0.9899604145086945,-0.622993776160385,0.04884482211100685,0.05729182360061141,0.07274119159012944,0.04860176376674308,0.09148093456065239,0.06088540391101903,0.05835687770159154,0.060892527221582365,-0.8345521216946234,0.06589983879880246,0.06077046631099188,0.060357189189142096,0.07664629542598748,0.07673588841431524,0.06182287872448845,0.059910207312175875,0.05732135325271643,0.060659760831859366,-0.8716271092697313,0.07324385388816872,-0.9973424705398805,0.04140123569638512,0.06067838654112483,0.0723577565723662,0.06670864045008928,0.0583569022878552,0.05987865204711558,0.0624039920148178,0.05761334385246373,0.06085462464405791,0.057692563728760554,0.07240653834340421,0.0629006841028919,0.06429441818350097,0.05588599313990417,0.051602761520037614,0.07386695063014899,0.04102980663022702,0.06515258854983641,0.06308996603666134,0.06940609446001027,0.09808404354785591,0.07249762438880061,0.066961186007746,0.07765383791184892,0.0617251167079649,-0.8024046796910129,0.06420454257159808,0.07199486138137969,0.059603116360317294,0.06799110903287091,0.054520508873216834,0.07542391271154666,0.08023871056057857,0.060182884203288954,0.07224894020351341,-0.8958158344765259,0.06194196472125836,0.062417857365333757,0.05837860501896003,0.06299895245940551,0.06686183286790427,0.06339509068410905,0.06162887466415695,-0.8925357375557419,0.060921816660818834,0.07038980448597147,0.0653384924317967,0.05628785647439823,0.05793888651124412,0.07316625532632587,0.05282569301544595,0.061815070554217755,0.05571922828507111,0.06191083267098107,0.06583738685337683,0.05477125186838713,0.06366447000133384,0.07423840931288307,0.06282167046344343,0.06866184825994534,0.06768621929854532,0.06395086760571572,0.05825000328037592,0.058946062632056095,0.058531338957723396,0.06396143194957733,0.0801673656333639,0.02167632153341481,0.06199295585021538,-0.8917187342495546,0.07236991105736788,0.07140134508442647,0.05937701269420331,0.06522039386122684,0.06887409095110403,0.06849559978012744,-0.7445530367727939,-0.00039032402310966023,0.07093420542753885,0.058555296008317666,0.06404015211761821,0.06451342556446979,0.07604697472785825,0.06585385890429919,0.05815462266715313,0.057342835836215175,0.07817095387446246,0.07290039191408594,0.06208807418124764,0.0570907383921904,0.06705934046256037,0.058473082585582696,0.06364507983783184,0.06463675149349682,-0.006218490070654042,0.05790532823373036,0.09407683574364563,0.05894692273227307,0.06318558150067215,0.05753517868970503,0.06009785259756963,-0.9163358102840471,0.061809525691844974,-0.8501310277078977,0.07999899047410243,0.07368430299734509,0.05957145285079042,-0.7255612382863441],"type":"scattergl"}],                        {"hovermode":"closest","paper_bgcolor":"#fff","plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Dependence plot for School Backlogs_1"},"xaxis":{"title":{"text":"School Backlogs_1"}},"yaxis":{"title":{"text":"SHAP value"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+</div>
+<script type="text/javascript">
+var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
+triggerTabList.forEach(function (triggerEl) {
+  var tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', function (event) {
+    event.preventDefault()
+    tabTrigger.show()
+    window.dispatchEvent(new Event('resize'));
+  })
+})
+</script>
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+window.dispatchEvent(new Event('resize'));
+</script>
+        
+</html>
+    
