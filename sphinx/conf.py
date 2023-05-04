@@ -20,6 +20,7 @@ sys.path.insert(0, os.path.abspath("../model/"))
 
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosectionlabel'
     ]
 
 templates_path = ['_templates']

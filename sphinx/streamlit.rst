@@ -7,7 +7,7 @@ Steps to run streamlit application
 
 * Step 2: Navigate to the root directory of the project:
 
-    **cd your-repo-name'**
+    **cd your-repo-name**
 
 * Step 3: Install the required dependencies:
 

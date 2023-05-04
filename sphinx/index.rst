@@ -11,6 +11,8 @@ Admissions's documentation!
 .. toctree::
    :maxdepth: 2
 
+   Understanding_stream
+
    streamlit
 
    sourcefile
